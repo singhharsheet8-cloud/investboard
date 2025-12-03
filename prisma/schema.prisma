@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model CachedEntity {
+  id          String   @id @default(cuid())
+  entityType  String   // "stock" | "mutual_fund" | "ipo" | "market_snapshot"
+  key         String   // e.g. symbol, mf code, "global" for snapshot
+  data        Json     // full structured JSON from LLM (normalized)
+  sourceUrls  Json     // array of source URLs
+  fetchedAt   DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([entityType, key])
+  @@index([entityType, key])
+}
+
+model WatchlistItem {
+  id         String   @id @default(cuid())
+  userId     String
+  entityType String   // "stock" | "mutual_fund" | "ipo"
+  entityKey  String   // symbol / code / ipo-id
+  createdAt  DateTime @default(now())
+
+  @@index([userId])
+  @@index([userId, entityType])
+  @@unique([userId, entityType, entityKey])
+}
+
+model WatchlistPreference {
+  id              String   @id @default(cuid())
+  userId          String
+  entityType      String   // "stock" | "mutual_fund" | "ipo"
+  visibleMetricKeys Json   // array of MetricKey strings
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@unique([userId, entityType])
+  @@index([userId])
+}
+
