@@ -50,7 +50,7 @@ export default function HomePage() {
                   <IpoSummaryCard
                     key={index}
                     ipo={ipo}
-                    id={ipo.identifier?.code || ipo.identifier?.symbol || String(index)}
+                    id={ipo.name || ipo.identifier?.code || ipo.identifier?.name || String(index)}
                   />
                 ))}
               </div>
