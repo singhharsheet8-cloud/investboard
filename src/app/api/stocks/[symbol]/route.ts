@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { callOpenRouterJSON } from "@/lib/openrouter-client";
 import { FINANCE_DATA_SYSTEM_PROMPT } from "@/lib/prompts";
 import { getStockCache, upsertStockCache } from "@/lib/db/repositories/stocksRepo";
+import { getFromMemoryCache, setInMemoryCache, cacheKeys } from "@/lib/cache";
 
 export async function GET(
   req: NextRequest,
@@ -9,37 +10,61 @@ export async function GET(
 ) {
   try {
     const { symbol: rawSymbol } = await params;
-    const symbol = decodeURIComponent(rawSymbol);
+    const symbol = decodeURIComponent(rawSymbol).toUpperCase();
     const url = req.nextUrl;
     const refresh = url.searchParams.get("refresh") === "true";
+    const cacheKey = cacheKeys.stock(symbol);
 
-    // Check cache first (indefinite caching - no TTL)
+    // Check cache first
     if (!refresh) {
       try {
         const cached = await getStockCache(symbol);
         if (cached) {
           return NextResponse.json(cached);
         }
-      } catch (cacheErr) {
-        console.error("Cache read failed:", cacheErr);
+      } catch (dbErr) {
+        console.error("DB cache read failed:", dbErr);
+      }
+      
+      const memoryCached = getFromMemoryCache(cacheKey);
+      if (memoryCached) {
+        return NextResponse.json(memoryCached);
       }
     }
 
-    // Fetch new data via LLM
+    // Fetch new data via LLM with web search
     const userPrompt = `
-Fetch detailed data for the Indian stock with symbol or name "${symbol}".
+Search the web for CURRENT data about Indian stock "${symbol}".
 
-Include:
-- Current price, change %, market cap
-- P/E, P/B ratios
-- Dividend yield, ROE, Debt/Equity
+Find from NSE, BSE, Moneycontrol, Screener, Economic Times:
+- Current stock price
+- Today's change and change %
+- Market capitalization
+- P/E ratio, P/B ratio
+- Dividend yield %
+- 52-week high and low
+- Trading volume
 - Sector and industry
-- 52-week high/low
-- Volume
+- Company full name
 
-Use sources like Moneycontrol, NSE, BSE, Screener for accurate data.
-
-Return ONLY the JSON object following the stock schema.
+Return ONLY a JSON object:
+{
+  "symbol": "${symbol}",
+  "name": "Full company name",
+  "price": number,
+  "change": number,
+  "changePercent": number,
+  "marketCap": number (in crores),
+  "pe": number or null,
+  "pb": number or null,
+  "dividendYield": number or null,
+  "high52w": number,
+  "low52w": number,
+  "volume": number,
+  "sector": "string",
+  "industry": "string",
+  "timestamp": "ISO date string"
+}
 `;
 
     const llmRes = await callOpenRouterJSON<any>({
@@ -47,6 +72,7 @@ Return ONLY the JSON object following the stock schema.
       userPrompt,
       temperature: 0,
       maxTokens: 1800,
+      enableWebSearch: true,
     });
 
     if (!llmRes.ok || !llmRes.data) {
@@ -58,10 +84,11 @@ Return ONLY the JSON object following the stock schema.
 
     const data = llmRes.data;
     
+    setInMemoryCache(cacheKey, data);
     try {
       await upsertStockCache(symbol, data);
-    } catch (cacheErr) {
-      console.error("Cache write failed:", cacheErr);
+    } catch (dbErr) {
+      console.error("DB cache write failed:", dbErr);
     }
 
     return NextResponse.json(data);

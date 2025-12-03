@@ -5,38 +5,54 @@ import {
   getSnapshotCache,
   upsertSnapshotCache,
 } from "@/lib/db/repositories/snapshotRepo";
+import { getFromMemoryCache, setInMemoryCache, cacheKeys } from "@/lib/cache";
 
 export async function GET(req: NextRequest) {
   try {
     const url = req.nextUrl;
     const refresh = url.searchParams.get("refresh") === "true";
+    const cacheKey = cacheKeys.marketSnapshot();
 
-    // Check cache first (indefinite caching - no TTL)
+    // Check cache first (DB then memory)
     if (!refresh) {
+      // Try database cache
       try {
         const cached = await getSnapshotCache();
         if (cached) {
           return NextResponse.json(cached);
         }
-      } catch (cacheErr) {
-        console.error("Cache read failed, fetching fresh data:", cacheErr);
-        // Continue to fetch fresh data
+      } catch (dbErr) {
+        console.error("DB cache read failed, trying memory cache:", dbErr);
+      }
+      
+      // Try memory cache
+      const memoryCached = getFromMemoryCache(cacheKey);
+      if (memoryCached) {
+        return NextResponse.json(memoryCached);
       }
     }
 
-    // Fetch new data via LLM
+    // Fetch new data via LLM with web search
     const userPrompt = `
-Fetch current market snapshot data for Indian stock markets.
+Search the web for CURRENT Indian stock market data as of today.
 
-Include:
-- Nifty 50 index (value, change, change %)
-- Sensex index (value, change, change %)
-- Optionally: Nifty Bank, Nifty IT, or other major indices
+Fetch:
+- Nifty 50 index (current value, change, change %)
+- Sensex index (current value, change, change %)
+- Nifty Bank index (current value, change, change %)
 - Market breadth: advances, declines, unchanged counts
 
-Use sources like NSE, BSE, Moneycontrol for real-time data.
+Use real-time sources like NSE India, BSE India, Moneycontrol, Economic Times for current market data.
 
-Return ONLY the JSON object following the market_snapshot schema.
+Return ONLY a JSON object with this structure:
+{
+  "nifty50": { "value": number, "change": number, "changePercent": number },
+  "sensex": { "value": number, "change": number, "changePercent": number },
+  "niftyBank": { "value": number, "change": number, "changePercent": number },
+  "breadth": { "advances": number, "declines": number, "unchanged": number },
+  "timestamp": "ISO date string",
+  "marketStatus": "open" | "closed"
+}
 `;
 
     const llmRes = await callOpenRouterJSON<any>({
@@ -44,6 +60,7 @@ Return ONLY the JSON object following the market_snapshot schema.
       userPrompt,
       temperature: 0,
       maxTokens: 1500,
+      enableWebSearch: true,
     });
 
     if (!llmRes.ok || !llmRes.data) {
@@ -55,11 +72,12 @@ Return ONLY the JSON object following the market_snapshot schema.
 
     const data = llmRes.data;
     
-    // Try to cache, but don't fail if database is down
+    // Save to both caches
+    setInMemoryCache(cacheKey, data);
     try {
       await upsertSnapshotCache(data);
-    } catch (cacheErr) {
-      console.error("Cache write failed:", cacheErr);
+    } catch (dbErr) {
+      console.error("DB cache write failed:", dbErr);
     }
 
     return NextResponse.json(data);
@@ -71,4 +89,3 @@ Return ONLY the JSON object following the market_snapshot schema.
     );
   }
 }
-

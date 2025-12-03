@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { callOpenRouterJSON } from "@/lib/openrouter-client";
 import { FINANCE_DATA_SYSTEM_PROMPT } from "@/lib/prompts";
 import { prisma } from "@/lib/db/prisma";
+import { getFromMemoryCache, setInMemoryCache, cacheKeys } from "@/lib/cache";
 
 const CURRENT_IPO_KEY = "current";
 
@@ -9,8 +10,9 @@ export async function GET(req: NextRequest) {
   try {
     const url = req.nextUrl;
     const refresh = url.searchParams.get("refresh") === "true";
+    const cacheKey = cacheKeys.ipoList("current");
 
-    // Check cache first (indefinite caching - no TTL)
+    // Check cache first
     if (!refresh) {
       try {
         const cached = await prisma.cachedEntity.findUnique({
@@ -26,26 +28,49 @@ export async function GET(req: NextRequest) {
           const data = cached.data as any;
           return NextResponse.json(Array.isArray(data) ? data : [data]);
         }
-      } catch (cacheErr) {
-        console.error("Cache read failed:", cacheErr);
+      } catch (dbErr) {
+        console.error("DB cache read failed:", dbErr);
+      }
+      
+      const memoryCached = getFromMemoryCache(cacheKey);
+      if (memoryCached) {
+        return NextResponse.json(memoryCached);
       }
     }
 
-    // Fetch new data via LLM
+    // Fetch new data via LLM with web search
     const userPrompt = `
-Fetch list of currently open IPOs in India.
+Search the web for CURRENTLY OPEN IPOs in India as of today.
 
-For each IPO, include:
-- Company name, sector
-- Issue open date, issue close date
-- Price band (low and high)
+Use NSE, BSE, Moneycontrol, Chittorgarh IPO for current IPO listings.
+
+For each currently open IPO, get:
+- Company name
+- Sector/Industry
+- Issue open date and close date
+- Price band (low and high in INR)
 - Lot size
-- GMP (Grey Market Premium) if available
-- Subscription data if available
+- Grey Market Premium (GMP) if available
+- Issue size in crores
+- Subscription status (times subscribed) if available
 
-Use sources like NSE, BSE, Moneycontrol, Chittorgarh for current IPO listings.
+Return ONLY a JSON array:
+[
+  {
+    "name": "Company Name",
+    "sector": "Sector",
+    "issueOpen": "YYYY-MM-DD",
+    "issueClose": "YYYY-MM-DD",
+    "priceLow": number,
+    "priceHigh": number,
+    "lotSize": number,
+    "gmp": number or null,
+    "issueSize": number (in crores),
+    "subscription": number or null (times subscribed)
+  }
+]
 
-Return a JSON array of IPO objects following the ipo schema.
+If no IPOs are currently open, return an empty array: []
 `;
 
     const llmRes = await callOpenRouterJSON<any>({
@@ -53,6 +78,7 @@ Return a JSON array of IPO objects following the ipo schema.
       userPrompt,
       temperature: 0,
       maxTokens: 2000,
+      enableWebSearch: true,
     });
 
     if (!llmRes.ok || !llmRes.data) {
@@ -63,7 +89,8 @@ Return a JSON array of IPO objects following the ipo schema.
     }
 
     const data = Array.isArray(llmRes.data) ? llmRes.data : [llmRes.data];
-
+    
+    setInMemoryCache(cacheKey, data);
     try {
       await prisma.cachedEntity.upsert({
         where: {
@@ -85,8 +112,8 @@ Return a JSON array of IPO objects following the ipo schema.
           fetchedAt: new Date(),
         },
       });
-    } catch (cacheErr) {
-      console.error("Cache write failed:", cacheErr);
+    } catch (dbErr) {
+      console.error("DB cache write failed:", dbErr);
     }
 
     return NextResponse.json(data);
@@ -98,4 +125,3 @@ Return a JSON array of IPO objects following the ipo schema.
     );
   }
 }
-

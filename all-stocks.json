@@ -1,0 +1,2558 @@
+[
+  {
+    "symbol": "ETL03",
+    "companyName": "Excelsoft Techn",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/it-servicesconsulting/excelsofttechnologies/ETL03",
+    "sector": "it servicesconsulting"
+  },
+  {
+    "symbol": "TCAIL",
+    "companyName": "Tenneco Clean",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/auto-ancillaries-engine-parts/tennecocleanairindia/TCAIL",
+    "sector": "auto ancillaries engine parts"
+  },
+  {
+    "symbol": "BGV01",
+    "companyName": "Billionbrains G",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/finance-stock-broking/billionbrainsgarageventures/BGV01",
+    "sector": "finance stock broking"
+  },
+  {
+    "symbol": "RI",
+    "companyName": "Reliance",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/refineries/relianceindustries/RI",
+    "sector": "refineries"
+  },
+  {
+    "symbol": "IC8",
+    "companyName": "Vodafone Idea",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/telecommunication-service-provider/vodafoneidea/IC8",
+    "sector": "telecommunication service provider"
+  },
+  {
+    "symbol": "IIFLW54277",
+    "companyName": "360 ONE WAM",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/360onewam/360onewam/IIFLW54277",
+    "sector": "360onewam"
+  },
+  {
+    "symbol": "MI42",
+    "companyName": "3M India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/diversified/3mindia/MI42",
+    "sector": "diversified"
+  },
+  {
+    "symbol": "AI45",
+    "companyName": "Aarti Ind",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/chemicals/aartiindustries/AI45",
+    "sector": "chemicals"
+  },
+  {
+    "symbol": "AF17",
+    "companyName": "AAVAS Financier",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financegeneral/aavasfinanciers/AF17",
+    "sector": "financegeneral"
+  },
+  {
+    "symbol": "ABC9",
+    "companyName": "AB Capital",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financeinvestments/adityabirlacapital/ABC9",
+    "sector": "financeinvestments"
+  },
+  {
+    "symbol": "ABB",
+    "companyName": "ABB India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/infrastructuregeneral/abbindia/ABB",
+    "sector": "infrastructuregeneral"
+  },
+  {
+    "symbol": "AI51",
+    "companyName": "Abbott India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/abbottindia/AI51",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "ACC06",
+    "companyName": "ACC",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cementmajor/acc/ACC06",
+    "sector": "cementmajor"
+  },
+  {
+    "symbol": "ACE3",
+    "companyName": "Action Const",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/engineeringheavy/actionconstructionequipment/ACE3",
+    "sector": "engineeringheavy"
+  },
+  {
+    "symbol": "AT22",
+    "companyName": "Adani Energy",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/powertransmissionequipment/adanienergysolutions/AT22",
+    "sector": "powertransmissionequipment"
+  },
+  {
+    "symbol": "AE13",
+    "companyName": "Adani Enterpris",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/trading/adanienterprises/AE13",
+    "sector": "trading"
+  },
+  {
+    "symbol": "MPS",
+    "companyName": "Adani Ports",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/infrastructuregeneral/adaniportsspecialeconomiczone/MPS",
+    "sector": "infrastructuregeneral"
+  },
+  {
+    "symbol": "AP11",
+    "companyName": "Adani Power",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/powergenerationdistribution/adanipower/AP11",
+    "sector": "powergenerationdistribution"
+  },
+  {
+    "symbol": "ADG01",
+    "companyName": "Adani Total Gas",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/adanitotalgas/adanitotalgas/ADG01",
+    "sector": "adanitotalgas"
+  },
+  {
+    "symbol": "PFR",
+    "companyName": "Aditya Birla F",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/retail/adityabirlafashionretail/PFR",
+    "sector": "retail"
+  },
+  {
+    "symbol": "CTI",
+    "companyName": "Aditya Birla Re",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/adityabirlare/adityabirlarealestate/CTI",
+    "sector": "adityabirlare"
+  },
+  {
+    "symbol": "AL9",
+    "companyName": "Aegis Logistics",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/transportlogistics/aegislogistics/AL9",
+    "sector": "transportlogistics"
+  },
+  {
+    "symbol": "AI84",
+    "companyName": "Aether Ind",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/specialitychemicals/aetherindustries/AI84",
+    "sector": "specialitychemicals"
+  },
+  {
+    "symbol": "AIE01",
+    "companyName": "AIA Engineering",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/castingsforgings/aiaengineering/AIE01",
+    "sector": "castingsforgings"
+  },
+  {
+    "symbol": "AP22",
+    "companyName": "Ajanta Pharma",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/ajantapharma/AP22",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "ICI",
+    "companyName": "Akzo Nobel",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/paintsvarnishes/akzonobelindia/ICI",
+    "sector": "paintsvarnishes"
+  },
+  {
+    "symbol": "AP35",
+    "companyName": "Alembic Pharma",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/alembicpharmaceuticals/AP35",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "AL05",
+    "companyName": "Alkem Lab",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/alkemlaboratories/AL05",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "AAC",
+    "companyName": "Alkyl Amines",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/chemicals/alkylamineschemicals/AAC",
+    "sector": "chemicals"
+  },
+  {
+    "symbol": "AI54",
+    "companyName": "Alok Industries",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/textilesweaving/alokindustries/AI54",
+    "sector": "textilesweaving"
+  },
+  {
+    "symbol": "ARB",
+    "companyName": "Amara Raja",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/autoancillaries/amararajaenergymobility/ARB",
+    "sector": "autoancillaries"
+  },
+  {
+    "symbol": "AEI01",
+    "companyName": "Amber Enterpris",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/amberenterprisesindialimited/AEI01",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "AC18",
+    "companyName": "Ambuja Cements",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cementmajor/ambujacements/AC18",
+    "sector": "cementmajor"
+  },
+  {
+    "symbol": "ARI",
+    "companyName": "Anant Raj",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/anantraj/anantraj/ARI",
+    "sector": "anantraj"
+  },
+  {
+    "symbol": "AI40",
+    "companyName": "Apar Ind",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/electricequipment/aparindustries/AI40",
+    "sector": "electricequipment"
+  },
+  {
+    "symbol": "BT09",
+    "companyName": "APL Apollo",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/steeltubespipes/aplapollotubes/BT09",
+    "sector": "steeltubespipes"
+  },
+  {
+    "symbol": "AHE",
+    "companyName": "Apollo Hospital",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/hospitalsmedicalservices/apollohospitalsenterprises/AHE",
+    "sector": "hospitalsmedicalservices"
+  },
+  {
+    "symbol": "AT14",
+    "companyName": "Apollo Tyres",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/tyres/apollotyres/AT14",
+    "sector": "tyres"
+  },
+  {
+    "symbol": "AIG01",
+    "companyName": "Asahi India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/glassglassproducts/asahiindiaglass/AIG01",
+    "sector": "glassglassproducts"
+  },
+  {
+    "symbol": "AL",
+    "companyName": "Ashok Leyland",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/autolcvshcvs/ashokleyland/AL",
+    "sector": "autolcvshcvs"
+  },
+  {
+    "symbol": "AP31",
+    "companyName": "Asian Paints",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/paintsvarnishes/asianpaints/AP31",
+    "sector": "paintsvarnishes"
+  },
+  {
+    "symbol": "APT02",
+    "companyName": "Astral Ltd",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/plastics/astrallimited/APT02",
+    "sector": "plastics"
+  },
+  {
+    "symbol": "AZP",
+    "companyName": "AstraZeneca",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/astrazenecapharma/AZP",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "A06",
+    "companyName": "Atul",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/chemicals/atul/A06",
+    "sector": "chemicals"
+  },
+  {
+    "symbol": "ASF02",
+    "companyName": "AU Small Financ",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/banksprivatesector/ausmallfinancebank/ASF02",
+    "sector": "banksprivatesector"
+  },
+  {
+    "symbol": "AP",
+    "companyName": "Aurobindo Pharm",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/aurobindopharma/AP",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "AII01",
+    "companyName": "Authum Invest",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/authuminvest/authuminvestmentinfrastucture/AII01",
+    "sector": "authuminvest"
+  },
+  {
+    "symbol": "AS19",
+    "companyName": "Avenue Supermar",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/retail/avenuesupermarts/AS19",
+    "sector": "retail"
+  },
+  {
+    "symbol": "AB16",
+    "companyName": "Axis Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/banksprivatesector/axisbank/AB16",
+    "sector": "banksprivatesector"
+  },
+  {
+    "symbol": "BA10",
+    "companyName": "Bajaj Auto",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/auto23wheelers/bajajauto/BA10",
+    "sector": "auto23wheelers"
+  },
+  {
+    "symbol": "BAF",
+    "companyName": "Bajaj Finance",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bajajfinance/bajajfinance/BAF",
+    "sector": "bajajfinance"
+  },
+  {
+    "symbol": "BF04",
+    "companyName": "Bajaj Finserv",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financeinvestments/bajajfinserv/BF04",
+    "sector": "financeinvestments"
+  },
+  {
+    "symbol": "BHI",
+    "companyName": "Bajaj Holdings",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financeinvestments/bajajholdingsinvestment/BHI",
+    "sector": "financeinvestments"
+  },
+  {
+    "symbol": "BI03",
+    "companyName": "Balkrishna Ind",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/tyres/balkrishnaindustries/BI03",
+    "sector": "tyres"
+  },
+  {
+    "symbol": "BCM",
+    "companyName": "Balrampur Chini",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/sugar/balrampurchinimills/BCM",
+    "sector": "sugar"
+  },
+  {
+    "symbol": "BB09",
+    "companyName": "Bandhan Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/banksprivatesector/bandhanbank/BB09",
+    "sector": "banksprivatesector"
+  },
+  {
+    "symbol": "BOB",
+    "companyName": "Bank of Baroda",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bankspublicsector/bankofbaroda/BOB",
+    "sector": "bankspublicsector"
+  },
+  {
+    "symbol": "BOI",
+    "companyName": "Bank of India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bankspublicsector/bankofindia/BOI",
+    "sector": "bankspublicsector"
+  },
+  {
+    "symbol": "BM05",
+    "companyName": "Bank of Mah",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bankspublicsector/bankmaharashtra/BM05",
+    "sector": "bankspublicsector"
+  },
+  {
+    "symbol": "BAS",
+    "companyName": "BASF",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/chemicals/basfindia/BAS",
+    "sector": "chemicals"
+  },
+  {
+    "symbol": "BI01",
+    "companyName": "Bata India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/leatherproducts/bataindia/BI01",
+    "sector": "leatherproducts"
+  },
+  {
+    "symbol": "BC12",
+    "companyName": "Bayer CropScien",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pesticidesagrochemicals/bayercropscience/BC12",
+    "sector": "pesticidesagrochemicals"
+  },
+  {
+    "symbol": "BEM03",
+    "companyName": "BEML",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/infrastructuregeneral/beml/BEM03",
+    "sector": "infrastructuregeneral"
+  },
+  {
+    "symbol": "BPI02",
+    "companyName": "Berger Paints",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/paintsvarnishes/bergerpaintsindia/BPI02",
+    "sector": "paintsvarnishes"
+  },
+  {
+    "symbol": "BDL01",
+    "companyName": "Bharat Dynamics",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bharatdynamics/bharatdynamics/BDL01",
+    "sector": "bharatdynamics"
+  },
+  {
+    "symbol": "BE03",
+    "companyName": "Bharat Elec",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bharatelec/bharatelectronics/BE03",
+    "sector": "bharatelec"
+  },
+  {
+    "symbol": "BF03",
+    "companyName": "Bharat Forge",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/castingsforgings/bharatforge/BF03",
+    "sector": "castingsforgings"
+  },
+  {
+    "symbol": "BA08",
+    "companyName": "Bharti Airtel",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/telecommunicationsservice/bhartiairtel/BA08",
+    "sector": "telecommunicationsservice"
+  },
+  {
+    "symbol": "BHE",
+    "companyName": "BHEL",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/infrastructuregeneral/bharatheavyelectricals/BHE",
+    "sector": "infrastructuregeneral"
+  },
+  {
+    "symbol": "BL03",
+    "companyName": "Biocon",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/biocon/BL03",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "BC07",
+    "companyName": "Birla Corp",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cementmajor/birlacorporation/BC07",
+    "sector": "cementmajor"
+  },
+  {
+    "symbol": "KPI02",
+    "companyName": "Birlasoft",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftwaremediumsmall/birlasoft/KPI02",
+    "sector": "computerssoftwaremediumsmall"
+  },
+  {
+    "symbol": "BLS",
+    "companyName": "BLS Internation",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/blsinternationalservices/BLS",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "BDE",
+    "companyName": "Blue Dart",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/couriers/bluedartexpress/BDE",
+    "sector": "couriers"
+  },
+  {
+    "symbol": "BS",
+    "companyName": "Blue Star",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/consumergoodswhitegoods/bluestar/BS",
+    "sector": "consumergoodswhitegoods"
+  },
+  {
+    "symbol": "BBT",
+    "companyName": "Bombay Burmah",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/plantationsteacoffee/bombayburmahtradingcorporation/BBT",
+    "sector": "plantationsteacoffee"
+  },
+  {
+    "symbol": "B05",
+    "companyName": "Bosch",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/autoancillaries/bosch/B05",
+    "sector": "autoancillaries"
+  },
+  {
+    "symbol": "BPC",
+    "companyName": "BPCL",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/refineries/bharatpetroleumcorporation/BPC",
+    "sector": "refineries"
+  },
+  {
+    "symbol": "BE08",
+    "companyName": "Brigade Ent",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/constructioncontractingrealestate/brigadeenterprises/BE08",
+    "sector": "constructioncontractingrealestate"
+  },
+  {
+    "symbol": "BI",
+    "companyName": "Britannia",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/foodprocessing/britanniaindustries/BI",
+    "sector": "foodprocessing"
+  },
+  {
+    "symbol": "CFH",
+    "companyName": "Can Fin Homes",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financehousing/canfinhomes/CFH",
+    "sector": "financehousing"
+  },
+  {
+    "symbol": "CB06",
+    "companyName": "Canara Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bankspublicsector/canarabank/CB06",
+    "sector": "bankspublicsector"
+  },
+  {
+    "symbol": "CPL",
+    "companyName": "Caplin Labs",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/caplinpointlaboratories/CPL",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "MMF05",
+    "companyName": "Capri Global",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financegeneral/capriglobalcapital/MMF05",
+    "sector": "financegeneral"
+  },
+  {
+    "symbol": "CU",
+    "companyName": "Carborundum",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/abrasives/carborundumuniversal/CU",
+    "sector": "abrasives"
+  },
+  {
+    "symbol": "CI01",
+    "companyName": "Castrol",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/lubricants/castrolindia/CI01",
+    "sector": "lubricants"
+  },
+  {
+    "symbol": "CC10",
+    "companyName": "CCL Products",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/plantationsteacoffee/cclproductsindia/CC10",
+    "sector": "plantationsteacoffee"
+  },
+  {
+    "symbol": "C07",
+    "companyName": "Ceat",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/tyres/ceat/C07",
+    "sector": "tyres"
+  },
+  {
+    "symbol": "CBO01",
+    "companyName": "Central Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bankspublicsector/centralbankindia/CBO01",
+    "sector": "bankspublicsector"
+  },
+  {
+    "symbol": "CP9",
+    "companyName": "CenturyPlyboard",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/centuryplyboards/CP9",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "CS18",
+    "companyName": "Cera Sanitary",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/ceramicsgranite/cerasanitaryware/CS18",
+    "sector": "ceramicsgranite"
+  },
+  {
+    "symbol": "CES",
+    "companyName": "CESC",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/powergenerationdistribution/cesc/CES",
+    "sector": "powergenerationdistribution"
+  },
+  {
+    "symbol": "CGC01",
+    "companyName": "CG Consumer",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/electricals/cromptongreavesconsumerelectrical/CGC01",
+    "sector": "electricals"
+  },
+  {
+    "symbol": "CG",
+    "companyName": "CG Power",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/electricequipment/cgpowerindustrialsolutions/CG",
+    "sector": "electricequipment"
+  },
+  {
+    "symbol": "CH03",
+    "companyName": "Chalet Hotels",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/hotels/chalethotels/CH03",
+    "sector": "hotels"
+  },
+  {
+    "symbol": "CFC",
+    "companyName": "Chambal Fert",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/fertilisers/chambalfertiliserschemicals/CFC",
+    "sector": "fertilisers"
+  },
+  {
+    "symbol": "CPC02",
+    "companyName": "Chennai Petro",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/refineries/chennaipetroleumcorporation/CPC02",
+    "sector": "refineries"
+  },
+  {
+    "symbol": "TII",
+    "companyName": "Chola Fin Hold",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/cholamandalamfinancialholdings/TII",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "CDB",
+    "companyName": "Chola Invest.",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cholainvest/cholamandalaminvestmentfinancecompany/CDB",
+    "sector": "cholainvest"
+  },
+  {
+    "symbol": "MF19",
+    "companyName": "CIEINDIA",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cieindia/cieautomotiveindia/MF19",
+    "sector": "cieindia"
+  },
+  {
+    "symbol": "C",
+    "companyName": "Cipla",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/cipla/C",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "CUB",
+    "companyName": "City Union Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/banksprivatesector/cityunionbank/CUB",
+    "sector": "banksprivatesector"
+  },
+  {
+    "symbol": "CST",
+    "companyName": "Clean Science",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/specialitychemicals/cleansciencetechnology/CST",
+    "sector": "specialitychemicals"
+  },
+  {
+    "symbol": "CI11",
+    "companyName": "Coal India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miningminerals/coalindia/CI11",
+    "sector": "miningminerals"
+  },
+  {
+    "symbol": "CS",
+    "companyName": "Cochin Shipyard",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cochinshipyard/cochinshipyard/CS",
+    "sector": "cochinshipyard"
+  },
+  {
+    "symbol": "NII02",
+    "companyName": "COFORGE",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/coforge/NII02",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "CPI",
+    "companyName": "Colgate",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/personalcare/colgatepalmoliveindia/CPI",
+    "sector": "personalcare"
+  },
+  {
+    "symbol": "CCI",
+    "companyName": "Container Corp",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/transportlogistics/containercorporationindia/CCI",
+    "sector": "transportlogistics"
+  },
+  {
+    "symbol": "CI45",
+    "companyName": "Coromandel Int",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/fertilisers/coromandelinternational/CI45",
+    "sector": "fertilisers"
+  },
+  {
+    "symbol": "CRI",
+    "companyName": "CRISIL",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/crisil/CRI",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "CI02",
+    "companyName": "Cummins",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/engines/cumminsindia/CI02",
+    "sector": "engines"
+  },
+  {
+    "symbol": "IE07",
+    "companyName": "Cyient",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/cyient/IE07",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "DI",
+    "companyName": "Dabur India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/personalcare/daburindia/DI",
+    "sector": "personalcare"
+  },
+  {
+    "symbol": "OCL",
+    "companyName": "Dalmia Bharat",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cementmajor/dalmiabharat/OCL",
+    "sector": "cementmajor"
+  },
+  {
+    "symbol": "DCM02",
+    "companyName": "DCM Shriram",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/diversified/dcmshriram/DCM02",
+    "sector": "diversified"
+  },
+  {
+    "symbol": "DFP",
+    "companyName": "Deepak Fert",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/fertilisers/deepakfertilisersandpetrochemicalscorporation/DFP",
+    "sector": "fertilisers"
+  },
+  {
+    "symbol": "DN",
+    "companyName": "Deepak Nitrite",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/chemicals/deepaknitrite/DN",
+    "sector": "chemicals"
+  },
+  {
+    "symbol": "DL03",
+    "companyName": "Divis Labs",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/divislaboratories/DL03",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "DT07",
+    "companyName": "Dixon Technolog",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/electricals/dixontechnologies/DT07",
+    "sector": "electricals"
+  },
+  {
+    "symbol": "D04",
+    "companyName": "DLF",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/constructioncontractingrealestate/dlf/D04",
+    "sector": "constructioncontractingrealestate"
+  },
+  {
+    "symbol": "DIL04",
+    "companyName": "DOMS Industries",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/printingstationery/domsindustries/DIL04",
+    "sector": "printingstationery"
+  },
+  {
+    "symbol": "DLP01",
+    "companyName": "Dr Lal PathLab",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/drlalpathlabs/DLP01",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "DRL",
+    "companyName": "Dr Reddys Labs",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/drreddyslaboratories/DRL",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "ES06",
+    "companyName": "eClerx Services",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftwaremediumsmall/eclerxservices/eS06",
+    "sector": "computerssoftwaremediumsmall"
+  },
+  {
+    "symbol": "EM",
+    "companyName": "Eicher Motors",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/autolcvshcvs/eichermotors/EM",
+    "sector": "autolcvshcvs"
+  },
+  {
+    "symbol": "EID",
+    "companyName": "EID Parry",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/sugar/eidparryindia/EID",
+    "sector": "sugar"
+  },
+  {
+    "symbol": "EIH",
+    "companyName": "EIH",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/hotels/eih/EIH",
+    "sector": "hotels"
+  },
+  {
+    "symbol": "EE01",
+    "companyName": "Elgi Equipments",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/compressors/elgiequipments/EE01",
+    "sector": "compressors"
+  },
+  {
+    "symbol": "E06",
+    "companyName": "Emami",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/personalcare/emami/E06",
+    "sector": "personalcare"
+  },
+  {
+    "symbol": "ET01",
+    "companyName": "Endurance Techn",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/auto23wheelers/endurancetechnologies/ET01",
+    "sector": "auto23wheelers"
+  },
+  {
+    "symbol": "EI14",
+    "companyName": "Engineers India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/engineersindia/engineersindia/EI14",
+    "sector": "engineersindia"
+  },
+  {
+    "symbol": "EI06",
+    "companyName": "Esab India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/electrodesgraphite/esabindia/EI06",
+    "sector": "electrodesgraphite"
+  },
+  {
+    "symbol": "E",
+    "companyName": "Escorts Kubota",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/escortskubota/escortskubota/E",
+    "sector": "escortskubota"
+  },
+  {
+    "symbol": "EI",
+    "companyName": "Exide Ind",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/autoancillaries/exideindustries/EI",
+    "sector": "autoancillaries"
+  },
+  {
+    "symbol": "FB",
+    "companyName": "Federal Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/banksprivatesector/federalbank/FB",
+    "sector": "banksprivatesector"
+  },
+  {
+    "symbol": "FOI",
+    "companyName": "Fine Organics",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/fineorganicsindustries/FOI",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "FC01",
+    "companyName": "Finolex Cables",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cablestelephone/finolexcables/FC01",
+    "sector": "cablestelephone"
+  },
+  {
+    "symbol": "FI",
+    "companyName": "Finolex Ind",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/petrochemicals/finolexindustries/FI",
+    "sector": "petrochemicals"
+  },
+  {
+    "symbol": "FS07",
+    "companyName": "Firstsource Sol",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftwaremediumsmall/firstsourcesolutions/FS07",
+    "sector": "computerssoftwaremediumsmall"
+  },
+  {
+    "symbol": "FH",
+    "companyName": "Fortis Health",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/hospitalsmedicalservices/fortishealthcare/FH",
+    "sector": "hospitalsmedicalservices"
+  },
+  {
+    "symbol": "FEV",
+    "companyName": "FSN E-Co Nykaa",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/fsnecommerceventuresnykaa/FEV",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "GAI",
+    "companyName": "GAIL",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/oildrillingandexploration/gailindia/GAI",
+    "sector": "oildrillingandexploration"
+  },
+  {
+    "symbol": "GSL06",
+    "companyName": "Galaxy Surf",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/diversifiedchemicals/galaxysurfactants/GSL06",
+    "sector": "diversifiedchemicals"
+  },
+  {
+    "symbol": "GRS01",
+    "companyName": "Garden Reach Sh",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/engineeringheavy/gardenreachshipbuildersengineers/GRS01",
+    "sector": "engineeringheavy"
+  },
+  {
+    "symbol": "GWR",
+    "companyName": "Garware Technic",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/textilesgeneral/garwaretechnicalfibres/GWR",
+    "sector": "textilesgeneral"
+  },
+  {
+    "symbol": "GES",
+    "companyName": "GE Shipping",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/shipping/greateasternshippingcompany/GES",
+    "sector": "shipping"
+  },
+  {
+    "symbol": "GIC12",
+    "companyName": "General Insuran",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/diversified/generalinsurancecorporationindia/GIC12",
+    "sector": "diversified"
+  },
+  {
+    "symbol": "GI22",
+    "companyName": "Gillette India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/personalcare/gilletteindia/GI22",
+    "sector": "personalcare"
+  },
+  {
+    "symbol": "GSK",
+    "companyName": "GlaxoSmithKline",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/glaxosmithklinepharmaceuticals/GSK",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "GP08",
+    "companyName": "Glenmark",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/glenmarkpharma/GP08",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "GI27",
+    "companyName": "GMR Airports",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/gmrairports/gmrairports/GI27",
+    "sector": "gmrairports"
+  },
+  {
+    "symbol": "GNV",
+    "companyName": "GNFC",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/gnfc/gujaratnarmadavalleyfertchem/GNV",
+    "sector": "gnfc"
+  },
+  {
+    "symbol": "GPI",
+    "companyName": "Godfrey Phillip",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cigarettes/godfreyphillipsindia/GPI",
+    "sector": "cigarettes"
+  },
+  {
+    "symbol": "GA03",
+    "companyName": "Godrej Agrovet",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/godrejagrovet/GA03",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "GCP",
+    "companyName": "Godrej Consumer",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/personalcare/godrejconsumerproducts/GCP",
+    "sector": "personalcare"
+  },
+  {
+    "symbol": "GI23",
+    "companyName": "Godrej Ind",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/personalcare/godrejindustries/GI23",
+    "sector": "personalcare"
+  },
+  {
+    "symbol": "GP11",
+    "companyName": "Godrej Prop",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/constructioncontractingrealestate/godrejproperties/GP11",
+    "sector": "constructioncontractingrealestate"
+  },
+  {
+    "symbol": "GI25",
+    "companyName": "Granules India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/granulesindia/GI25",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "GI13",
+    "companyName": "Graphite India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/electrodesgraphite/graphiteindia/GI13",
+    "sector": "electrodesgraphite"
+  },
+  {
+    "symbol": "GI01",
+    "companyName": "Grasim",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/diversified/grasimindustries/GI01",
+    "sector": "diversified"
+  },
+  {
+    "symbol": "GN",
+    "companyName": "Grindwell Norto",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/abrasives/grindwellnorton/GN",
+    "sector": "abrasives"
+  },
+  {
+    "symbol": "GSF",
+    "companyName": "GSFC",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/fertilisers/gujaratstatefertilizerschemicals/GSF",
+    "sector": "fertilisers"
+  },
+  {
+    "symbol": "GMD",
+    "companyName": "Guj Mineral",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miningminerals/gujaratmineraldevelopmentcorporation/GMD",
+    "sector": "miningminerals"
+  },
+  {
+    "symbol": "GSP02",
+    "companyName": "Guj State Petro",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/oildrillingandexploration/gujaratstatepetronet/GSP02",
+    "sector": "oildrillingandexploration"
+  },
+  {
+    "symbol": "GUJAR54281",
+    "companyName": "Gujarat Fluoro",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/chemicals/gujaratfluorochemicalslimited/GUJAR54281",
+    "sector": "chemicals"
+  },
+  {
+    "symbol": "GGC",
+    "companyName": "Gujarat Gas",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/oildrillingandexploration/gujaratgas/GGC",
+    "sector": "oildrillingandexploration"
+  },
+  {
+    "symbol": "HAP",
+    "companyName": "Hatsun Agro",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/foodprocessing/hatsunagroproducts/HAP",
+    "sector": "foodprocessing"
+  },
+  {
+    "symbol": "HI01",
+    "companyName": "Havells India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/electricequipment/havellsindia/HI01",
+    "sector": "electricequipment"
+  },
+  {
+    "symbol": "HBL02",
+    "companyName": "HBL Eng",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/electricequipment/hblengineering/HBL02",
+    "sector": "electricequipment"
+  },
+  {
+    "symbol": "HCL02",
+    "companyName": "HCL Tech",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/hcltechnologies/HCL02",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "HAM02",
+    "companyName": "HDFC AMC",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financeinvestments/hdfcassetmanagementcompany/HAM02",
+    "sector": "financeinvestments"
+  },
+  {
+    "symbol": "HDF01",
+    "companyName": "HDFC Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/banksprivatesector/hdfcbank/HDF01",
+    "sector": "banksprivatesector"
+  },
+  {
+    "symbol": "HSL01",
+    "companyName": "HDFC Life",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/lifehealthinsurance/hdfclifeinsurancecompany/HSL01",
+    "sector": "lifehealthinsurance"
+  },
+  {
+    "symbol": "HEG",
+    "companyName": "HEG",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/electrodesgraphite/heg/HEG",
+    "sector": "electrodesgraphite"
+  },
+  {
+    "symbol": "HHM",
+    "companyName": "Hero Motocorp",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/auto23wheelers/heromotocorp/HHM",
+    "sector": "auto23wheelers"
+  },
+  {
+    "symbol": "HFC",
+    "companyName": "HFCL",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/telecommunicationsequipment/hfcl/HFC",
+    "sector": "telecommunicationsequipment"
+  },
+  {
+    "symbol": "HCI01",
+    "companyName": "Himadri Special",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/chemicals/himadrispecialitychemical/HCI01",
+    "sector": "chemicals"
+  },
+  {
+    "symbol": "HC07",
+    "companyName": "Hind Copper",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/metalsnonferrous/hindustancopper/HC07",
+    "sector": "metalsnonferrous"
+  },
+  {
+    "symbol": "HZ",
+    "companyName": "Hind Zinc",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/metalsnonferrous/hindustanzinc/HZ",
+    "sector": "metalsnonferrous"
+  },
+  {
+    "symbol": "HI",
+    "companyName": "Hindalco",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/hindalco/hindalcoindustries/HI",
+    "sector": "hindalco"
+  },
+  {
+    "symbol": "HPC",
+    "companyName": "HINDPETRO",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/hindpetro/hindustanpetroleumcorporation/HPC",
+    "sector": "hindpetro"
+  },
+  {
+    "symbol": "HA04",
+    "companyName": "Honeywell Autom",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/telecommunicationsequipment/honeywellautomation/HA04",
+    "sector": "telecommunicationsequipment"
+  },
+  {
+    "symbol": "HUD",
+    "companyName": "HUDCO",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/constructioncontractingrealestate/housingurbandevelopmentcorporation/HUD",
+    "sector": "constructioncontractingrealestate"
+  },
+  {
+    "symbol": "HU",
+    "companyName": "HUL",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/personalcare/hindustanunilever/HU",
+    "sector": "personalcare"
+  },
+  {
+    "symbol": "HMI01",
+    "companyName": "Hyundai Motor",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/automobilepassengercars/hyundaimotorindia/HMI01",
+    "sector": "automobilepassengercars"
+  },
+  {
+    "symbol": "ICI02",
+    "companyName": "ICICI Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/banksprivatesector/icicibank/ICI02",
+    "sector": "banksprivatesector"
+  },
+  {
+    "symbol": "ILG",
+    "companyName": "ICICI Lombard",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/icicilombard/icicilombardgeneralinsurancecompany/ILG",
+    "sector": "icicilombard"
+  },
+  {
+    "symbol": "IPL01",
+    "companyName": "ICICI Prudentia",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financegeneral/iciciprudentiallifeinsurancecompany/IPL01",
+    "sector": "financegeneral"
+  },
+  {
+    "symbol": "IDB05",
+    "companyName": "IDBI Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/idbibank/idbibank/IDB05",
+    "sector": "idbibank"
+  },
+  {
+    "symbol": "IDF01",
+    "companyName": "IDFC First Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/banksprivatesector/idfcfirstbank/IDF01",
+    "sector": "banksprivatesector"
+  },
+  {
+    "symbol": "IEE",
+    "companyName": "IEX",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/diversified/indianenergyexchange/IEE",
+    "sector": "diversified"
+  },
+  {
+    "symbol": "IFC02",
+    "companyName": "IFCI",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financetermlendinginstitutions/ifci/IFC02",
+    "sector": "financetermlendinginstitutions"
+  },
+  {
+    "symbol": "IG04",
+    "companyName": "IGL",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/oildrillingandexploration/indraprasthagas/IG04",
+    "sector": "oildrillingandexploration"
+  },
+  {
+    "symbol": "II15",
+    "companyName": "IIFL Finance",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financegeneral/iiflfinance/II15",
+    "sector": "financegeneral"
+  },
+  {
+    "symbol": "IC",
+    "companyName": "India Cements",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cementmajor/indiacements/IC",
+    "sector": "cementmajor"
+  },
+  {
+    "symbol": "II12",
+    "companyName": "Indiamart Inter",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/indiamartinter/indiamartintermesh/II12",
+    "sector": "indiamartinter"
+  },
+  {
+    "symbol": "IB04",
+    "companyName": "Indian Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bankspublicsector/indianbank/IB04",
+    "sector": "bankspublicsector"
+  },
+  {
+    "symbol": "IHC",
+    "companyName": "Indian Hotels",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/hotels/indianhotelscompany/IHC",
+    "sector": "hotels"
+  },
+  {
+    "symbol": "BI14",
+    "companyName": "INDUS TOWERS",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/telecommunicationsequipment/industowers/BI14",
+    "sector": "telecommunicationsequipment"
+  },
+  {
+    "symbol": "IIB",
+    "companyName": "IndusInd Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/banksprivatesector/indusindbank/IIB",
+    "sector": "banksprivatesector"
+  },
+  {
+    "symbol": "IEI01",
+    "companyName": "Info Edge",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/infoedgeindia/IEI01",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "IT",
+    "companyName": "Infosys",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/infosys/IT",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "IRI01",
+    "companyName": "Ingersoll Rand",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/compressors/ingersollrandindia/IRI01",
+    "sector": "compressors"
+  },
+  {
+    "symbol": "IW",
+    "companyName": "Inox Wind",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/powergenerationdistribution/inoxwind/IW",
+    "sector": "powergenerationdistribution"
+  },
+  {
+    "symbol": "IDA",
+    "companyName": "Intellect Desig",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/intellectdesignarena/IDA",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "IA04",
+    "companyName": "Interglobe Avi",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/transportlogistics/interglobeaviation/IA04",
+    "sector": "transportlogistics"
+  },
+  {
+    "symbol": "IOB",
+    "companyName": "IOB",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bankspublicsector/indianoverseasbank/IOB",
+    "sector": "bankspublicsector"
+  },
+  {
+    "symbol": "IOC",
+    "companyName": "IOC",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/refineries/indianoilcorporation/IOC",
+    "sector": "refineries"
+  },
+  {
+    "symbol": "IL",
+    "companyName": "Ipca Labs",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/ipcalaboratories/IL",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "IID01",
+    "companyName": "IRB Infra",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/irbinfra/irbinfrastructuredevelopers/IID01",
+    "sector": "irbinfra"
+  },
+  {
+    "symbol": "II07",
+    "companyName": "Ircon Internati",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/engineeringheavy/irconinternational/II07",
+    "sector": "engineeringheavy"
+  },
+  {
+    "symbol": "IRC",
+    "companyName": "IRCTC",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/irctcindianrailwaycateringtourismcorp/IRC",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "ITC",
+    "companyName": "ITC",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/itc/itc/ITC",
+    "sector": "itc"
+  },
+  {
+    "symbol": "ITI",
+    "companyName": "ITI",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/telecommunicationsequipment/iti/ITI",
+    "sector": "telecommunicationsequipment"
+  },
+  {
+    "symbol": "JKC03",
+    "companyName": "J. K. Cement",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cementmajor/jkcement/JKC03",
+    "sector": "cementmajor"
+  },
+  {
+    "symbol": "JBC01",
+    "companyName": "JB Chemicals",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/jbchemicalspharmaceuticals/JBC01",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "JBM03",
+    "companyName": "JBM Auto",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/autoancillaries/jbmauto/JBM03",
+    "sector": "autoancillaries"
+  },
+  {
+    "symbol": "JS08",
+    "companyName": "Jindal Saw",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/steeltubespipes/jindalsaw/JS08",
+    "sector": "steeltubespipes"
+  },
+  {
+    "symbol": "JSL01",
+    "companyName": "Jindal Stainles",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/steelmediumsmall/jindalstainless/JSL01",
+    "sector": "steelmediumsmall"
+  },
+  {
+    "symbol": "JSP",
+    "companyName": "Jindal Steel",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/jindalsteel/jindalsteel/JSP",
+    "sector": "jindalsteel"
+  },
+  {
+    "symbol": "JKB",
+    "companyName": "JK Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/banksprivatesector/jammukashmirbank/JKB",
+    "sector": "banksprivatesector"
+  },
+  {
+    "symbol": "JKL01",
+    "companyName": "JK Lakshmi Cem",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cementmajor/jklakshmicement/JKL01",
+    "sector": "cementmajor"
+  },
+  {
+    "symbol": "JMF",
+    "companyName": "JM Financial",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financeinvestments/jmfinancial/JMF",
+    "sector": "financeinvestments"
+  },
+  {
+    "symbol": "JE01",
+    "companyName": "JSW Energy",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/powergenerationdistribution/jswenergy/JE01",
+    "sector": "powergenerationdistribution"
+  },
+  {
+    "symbol": "JSW",
+    "companyName": "JSW Holdings",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financeinvestments/jswholdings/JSW",
+    "sector": "financeinvestments"
+  },
+  {
+    "symbol": "JSW01",
+    "companyName": "JSW Steel",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/steellarge/jswsteel/JSW01",
+    "sector": "steellarge"
+  },
+  {
+    "symbol": "JF04",
+    "companyName": "Jubilant Food",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/jubilantfoodworks/JF04",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "JO03",
+    "companyName": "Jubilant Pharmo",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/jubilantpharmova/JO03",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "CEB",
+    "companyName": "Jupiter Wagons",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/engineering/jupiterwagons/CEB",
+    "sector": "engineering"
+  },
+  {
+    "symbol": "JD",
+    "companyName": "Just Dial",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/justdial/JD",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "JL",
+    "companyName": "Jyothy Labs",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/personalcare/jyothylabs/JL",
+    "sector": "personalcare"
+  },
+  {
+    "symbol": "JCA",
+    "companyName": "Jyoti CNC Auto",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/misccommercialservices/jyoticncautomation/JCA",
+    "sector": "misccommercialservices"
+  },
+  {
+    "symbol": "KC06",
+    "companyName": "Kajaria Ceramic",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/ceramicsgranite/kajariaceramics/KC06",
+    "sector": "ceramicsgranite"
+  },
+  {
+    "symbol": "SRF03",
+    "companyName": "Kama Holdings",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/petrochemicals/kamaholdings/SRF03",
+    "sector": "petrochemicals"
+  },
+  {
+    "symbol": "KNP",
+    "companyName": "Kansai Nerolac",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/paintsvarnishes/kansainerolacpaints/KNP",
+    "sector": "paintsvarnishes"
+  },
+  {
+    "symbol": "KEC04",
+    "companyName": "KEC Intl",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/powertransmissionequipment/kecinternational/KEC04",
+    "sector": "powertransmissionequipment"
+  },
+  {
+    "symbol": "KEI",
+    "companyName": "KEI Industries",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cablespowerothers/keiindustries/KEI",
+    "sector": "cablespowerothers"
+  },
+  {
+    "symbol": "KIO",
+    "companyName": "KIOCL",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/steelspongeiron/kiocl/KIO",
+    "sector": "steelspongeiron"
+  },
+  {
+    "symbol": "KB02",
+    "companyName": "Kirloskar Bros",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pumps/kirloskarbrothers/KB02",
+    "sector": "pumps"
+  },
+  {
+    "symbol": "KOE03",
+    "companyName": "Kirloskar Oil",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/engines/kirloskaroilengines/KOE03",
+    "sector": "engines"
+  },
+  {
+    "symbol": "KC13",
+    "companyName": "KNR Construct",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/constructioncontractingcivil/knrconstructions/KC13",
+    "sector": "constructioncontractingcivil"
+  },
+  {
+    "symbol": "KMB",
+    "companyName": "Kotak Mahindra",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/banksprivatesector/kotakmahindrabank/KMB",
+    "sector": "banksprivatesector"
+  },
+  {
+    "symbol": "KPT",
+    "companyName": "KPIL",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/powertransmissionequipment/kalpataruprojectsinternational/KPT",
+    "sector": "powertransmissionequipment"
+  },
+  {
+    "symbol": "KPITT54265",
+    "companyName": "KPIT Tech",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/kpittech/kpittechnologies/KPITT54265",
+    "sector": "kpittech"
+  },
+  {
+    "symbol": "M15",
+    "companyName": "KPR Mill",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/textilesreadymadeapparels/kprmill/M15",
+    "sector": "textilesreadymadeapparels"
+  },
+  {
+    "symbol": "LFH",
+    "companyName": "L&T Finance",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/ltfinance/ltfinance/LFH",
+    "sector": "ltfinance"
+  },
+  {
+    "symbol": "LT",
+    "companyName": "Larsen",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/infrastructuregeneral/larsentoubro/LT",
+    "sector": "infrastructuregeneral"
+  },
+  {
+    "symbol": "LL05",
+    "companyName": "Laurus Labs",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/lauruslabs/LL05",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "LIC",
+    "companyName": "LIC Housing Fin",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financehousing/lichousingfinance/LIC",
+    "sector": "financehousing"
+  },
+  {
+    "symbol": "LIC09",
+    "companyName": "LIC India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/licindia/lifeinsurancecorporationindia/LIC09",
+    "sector": "licindia"
+  },
+  {
+    "symbol": "BOC",
+    "companyName": "Linde India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/chemicals/lindeindia/BOC",
+    "sector": "chemicals"
+  },
+  {
+    "symbol": "LME",
+    "companyName": "Lloyds Metals",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/steelspongeiron/lloydsmetalsenergy/LME",
+    "sector": "steelspongeiron"
+  },
+  {
+    "symbol": "LMW",
+    "companyName": "LMW",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/textilesmachinery/lmw/LMW",
+    "sector": "textilesmachinery"
+  },
+  {
+    "symbol": "MD03",
+    "companyName": "Lodha Developer",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/lodhadeveloper/lodhadevelopers/MD03",
+    "sector": "lodhadeveloper"
+  },
+  {
+    "symbol": "LTS",
+    "companyName": "LT Technology",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/lttechnology/lttechnologyservices/LTS",
+    "sector": "lttechnology"
+  },
+  {
+    "symbol": "LI12",
+    "companyName": "LTIMindtree",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/ltimindtree/LI12",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "L",
+    "companyName": "Lupin",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/lupin/L",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "MM",
+    "companyName": "M&M",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/autocarsjeeps/mm/MM",
+    "sector": "autocarsjeeps"
+  },
+  {
+    "symbol": "MS01",
+    "companyName": "Mah Scooters",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/auto23wheelers/maharashtrascooters/MS01",
+    "sector": "auto23wheelers"
+  },
+  {
+    "symbol": "MS02",
+    "companyName": "Mah Seamless",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/steeltubespipes/maharashtraseamless/MS02",
+    "sector": "steeltubespipes"
+  },
+  {
+    "symbol": "MG02",
+    "companyName": "Mahanagar Gas",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/refineries/mahanagargas/MG02",
+    "sector": "refineries"
+  },
+  {
+    "symbol": "MGF01",
+    "companyName": "Manappuram Fin",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financeleasinghirepurchase/manappuramfinance/MGF01",
+    "sector": "financeleasinghirepurchase"
+  },
+  {
+    "symbol": "M13",
+    "companyName": "Marico",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/personalcare/marico/M13",
+    "sector": "personalcare"
+  },
+  {
+    "symbol": "MS24",
+    "companyName": "Maruti Suzuki",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/autocarsjeeps/marutisuzukiindia/MS24",
+    "sector": "autocarsjeeps"
+  },
+  {
+    "symbol": "M",
+    "companyName": "Mastek",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/mastek/M",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "MI",
+    "companyName": "Max Financial",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financeinvestments/maxfinancialservices/MI",
+    "sector": "financeinvestments"
+  },
+  {
+    "symbol": "MCE",
+    "companyName": "MCX India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/multicommodityexchangeindia/MCE",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "MHS01",
+    "companyName": "Medplus Health",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/fooddrugretailing/medplushealthservices/MHS01",
+    "sector": "fooddrugretailing"
+  },
+  {
+    "symbol": "MH06",
+    "companyName": "Metropolis",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/hospitalsmedicalservices/metropolishealthcare/MH06",
+    "sector": "hospitalsmedicalservices"
+  },
+  {
+    "symbol": "MC23",
+    "companyName": "Minda Corp",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/autoancillaries/mindacorporation/MC23",
+    "sector": "autoancillaries"
+  },
+  {
+    "symbol": "MMT",
+    "companyName": "MMTC",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/trading/mmtc/MMT",
+    "sector": "trading"
+  },
+  {
+    "symbol": "MSS01",
+    "companyName": "MOTHERSON",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/motherson/samvardhanamothersoninternational/MSS01",
+    "sector": "motherson"
+  },
+  {
+    "symbol": "MSW",
+    "companyName": "Motherson SWI",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/autoancillaries/mothersonsumiwiringindia/MSW",
+    "sector": "autoancillaries"
+  },
+  {
+    "symbol": "MOF01",
+    "companyName": "Motilal Oswal",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financegeneral/motilaloswalfinancialservices/MOF01",
+    "sector": "financegeneral"
+  },
+  {
+    "symbol": "MB02",
+    "companyName": "MphasiS",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/mphasis/MB02",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "MRF",
+    "companyName": "MRF",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/tyres/mrf/MRF",
+    "sector": "tyres"
+  },
+  {
+    "symbol": "MRP",
+    "companyName": "MRPL",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/refineries/mangalorerefinerypetrochemicals/MRP",
+    "sector": "refineries"
+  },
+  {
+    "symbol": "MF10",
+    "companyName": "Muthoot Finance",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financeinvestments/muthootfinance/MF10",
+    "sector": "financeinvestments"
+  },
+  {
+    "symbol": "NAC",
+    "companyName": "NALCO",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/aluminium/nationalaluminiumcompany/NAC",
+    "sector": "aluminium"
+  },
+  {
+    "symbol": "NH",
+    "companyName": "Narayana Hruda",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/hospitalsmedicalservices/narayanahrudayalaya/NH",
+    "sector": "hospitalsmedicalservices"
+  },
+  {
+    "symbol": "NP07",
+    "companyName": "Natco Pharma",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/natcopharma/NP07",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "NFI",
+    "companyName": "Navin Fluorine",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/chemicals/navinfluorineinternational/NFI",
+    "sector": "chemicals"
+  },
+  {
+    "symbol": "NBC01",
+    "companyName": "NBCC (India)",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/infrastructuregeneral/nbccindia/NBC01",
+    "sector": "infrastructuregeneral"
+  },
+  {
+    "symbol": "NCC01",
+    "companyName": "NCC",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/constructioncontractingcivil/ncc/NCC01",
+    "sector": "constructioncontractingcivil"
+  },
+  {
+    "symbol": "NI",
+    "companyName": "Nestle",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/foodprocessing/nestleindia/NI",
+    "sector": "foodprocessing"
+  },
+  {
+    "symbol": "NMI",
+    "companyName": "Network 18",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/mediaentertainment/network18mediainvestments/NMI",
+    "sector": "mediaentertainment"
+  },
+  {
+    "symbol": "NL",
+    "companyName": "Neuland Lab",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/neulandlaboratories/NL",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "NIA",
+    "companyName": "New India Assur",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/newindiaassurancecompany/NIA",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "NST01",
+    "companyName": "Newgen Software",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/newgensoftwaretechnologies/NST01",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "N07",
+    "companyName": "NHPC",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/powergenerationdistribution/nhpc/N07",
+    "sector": "powergenerationdistribution"
+  },
+  {
+    "symbol": "RNL",
+    "companyName": "Nippon",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/nipponlifeindiaassetmanagement/RNL",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "NLC",
+    "companyName": "NLC India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/powergenerationdistribution/nlcindia/NLC",
+    "sector": "powergenerationdistribution"
+  },
+  {
+    "symbol": "NMD02",
+    "companyName": "NMDC",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miningminerals/nmdc/NMD02",
+    "sector": "miningminerals"
+  },
+  {
+    "symbol": "NS15",
+    "companyName": "NMDC Steel",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/ironsteel/nmdcsteel/NS15",
+    "sector": "ironsteel"
+  },
+  {
+    "symbol": "NTP",
+    "companyName": "NTPC",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/powergenerationdistribution/ntpc/NTP",
+    "sector": "powergenerationdistribution"
+  },
+  {
+    "symbol": "OR",
+    "companyName": "Oberoi Realty",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/constructioncontractingrealestate/oberoirealty/OR",
+    "sector": "constructioncontractingrealestate"
+  },
+  {
+    "symbol": "OI13",
+    "companyName": "Oil India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/oildrillingandexploration/oilindia/OI13",
+    "sector": "oildrillingandexploration"
+  },
+  {
+    "symbol": "OEM",
+    "companyName": "Ola Electric",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/autoancillariesbrakes/olaelectricmobility/OEM",
+    "sector": "autoancillariesbrakes"
+  },
+  {
+    "symbol": "GI29",
+    "companyName": "Olectra Greente",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/telecommunicationsservice/olectragreentech/GI29",
+    "sector": "telecommunicationsservice"
+  },
+  {
+    "symbol": "OC03",
+    "companyName": "One 97 Paytm",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/onlineservices/one97communicationspaytm/OC03",
+    "sector": "onlineservices"
+  },
+  {
+    "symbol": "ONG",
+    "companyName": "ONGC",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/oildrillingandexploration/oilnaturalgascorporation/ONG",
+    "sector": "oildrillingandexploration"
+  },
+  {
+    "symbol": "OFS01",
+    "companyName": "Oracle Fin Serv",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/oraclefinancialservicessoftware/OFS01",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "PGH",
+    "companyName": "P and G",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/personalcare/proctergamblehygienehealthcare/PGH",
+    "sector": "personalcare"
+  },
+  {
+    "symbol": "PI35",
+    "companyName": "Page Industries",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/textilesreadymadeapparels/pageindustries/PI35",
+    "sector": "textilesreadymadeapparels"
+  },
+  {
+    "symbol": "RSI",
+    "companyName": "Patanjali Foods",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/patanjalifoods/patanjalifoods/RSI",
+    "sector": "patanjalifoods"
+  },
+  {
+    "symbol": "PF14",
+    "companyName": "PB Fintech",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/multilineinsurancebrokers/pbfintech/PF14",
+    "sector": "multilineinsurancebrokers"
+  },
+  {
+    "symbol": "PCB01",
+    "companyName": "PCBL Chemical",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pcblchemical/pcblchemical/PCB01",
+    "sector": "pcblchemical"
+  },
+  {
+    "symbol": "PS15",
+    "companyName": "Persistent",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/persistentsystems/PS15",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "PLN",
+    "companyName": "Petronet LNG",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/oildrillingandexploration/petronetlng/PLN",
+    "sector": "oildrillingandexploration"
+  },
+  {
+    "symbol": "P",
+    "companyName": "Pfizer",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/pfizer/P",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "PE06",
+    "companyName": "PG Electroplast",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/consumergoodselectronic/pgelectroplast/PE06",
+    "sector": "consumergoodselectronic"
+  },
+  {
+    "symbol": "PM02",
+    "companyName": "Phoenix Mills",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/constructioncontractingrealestate/phoenixmills/PM02",
+    "sector": "constructioncontractingrealestate"
+  },
+  {
+    "symbol": "PII",
+    "companyName": "PI Industries",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pesticidesagrochemicals/piindustries/PII",
+    "sector": "pesticidesagrochemicals"
+  },
+  {
+    "symbol": "PI11",
+    "companyName": "Pidilite Ind",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/chemicals/pidiliteindustries/PI11",
+    "sector": "chemicals"
+  },
+  {
+    "symbol": "PNB05",
+    "companyName": "PNB",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bankspublicsector/punjabnationalbank/PNB05",
+    "sector": "bankspublicsector"
+  },
+  {
+    "symbol": "PHF",
+    "companyName": "PNB Housing Fin",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financehousing/pnbhousingfinance/PHF",
+    "sector": "financehousing"
+  },
+  {
+    "symbol": "PM06",
+    "companyName": "Poly Medicure",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/hospitalsmedicalservices/polymedicure/PM06",
+    "sector": "hospitalsmedicalservices"
+  },
+  {
+    "symbol": "PI44",
+    "companyName": "Polycab",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cablespowerothers/polycabindia/PI44",
+    "sector": "cablespowerothers"
+  },
+  {
+    "symbol": "MF20",
+    "companyName": "Poonawalla Fin",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financenbfc/poonawallafincorp/MF20",
+    "sector": "financenbfc"
+  },
+  {
+    "symbol": "PFC02",
+    "companyName": "Power Finance",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financetermlendinginstitutions/powerfinancecorporation/PFC02",
+    "sector": "financetermlendinginstitutions"
+  },
+  {
+    "symbol": "PGC",
+    "companyName": "Power Grid Corp",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/powergenerationdistribution/powergridcorporationindia/PGC",
+    "sector": "powergenerationdistribution"
+  },
+  {
+    "symbol": "PI17",
+    "companyName": "Praj Industries",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/engineeringheavy/prajindustries/PI17",
+    "sector": "engineeringheavy"
+  },
+  {
+    "symbol": "PEP02",
+    "companyName": "Prestige Estate",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/constructioncontractingrealestate/prestigeestatesprojects/PEP02",
+    "sector": "constructioncontractingrealestate"
+  },
+  {
+    "symbol": "M12",
+    "companyName": "Procter Gamble",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/proctergamblehealth/M12",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "PTC03",
+    "companyName": "PTC Industries",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/engineeringheavy/ptcindustries/PTC03",
+    "sector": "engineeringheavy"
+  },
+  {
+    "symbol": "PSB",
+    "companyName": "Punjab and Sind",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bankspublicsector/punjabsindbank/PSB",
+    "sector": "bankspublicsector"
+  },
+  {
+    "symbol": "PVR",
+    "companyName": "PVR INOX",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/mediaentertainment/pvrinox/PVR",
+    "sector": "mediaentertainment"
+  },
+  {
+    "symbol": "RK01",
+    "companyName": "Radico Khaitan",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/breweriesdistilleries/radicokhaitan/RK01",
+    "sector": "breweriesdistilleries"
+  },
+  {
+    "symbol": "RVN",
+    "companyName": "Rail Vikas",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/railvikasnigam/RVN",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "MC",
+    "companyName": "Ramco Cements",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cementmajor/theramcocements/MC",
+    "sector": "cementmajor"
+  },
+  {
+    "symbol": "RF17",
+    "companyName": "RamkrishnaForge",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/castingsforgings/ramkrishnaforgings/RF17",
+    "sector": "castingsforgings"
+  },
+  {
+    "symbol": "RCF01",
+    "companyName": "Rashtriya Chem",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/fertilisers/rashtriyachemicalsfertilisers/RCF01",
+    "sector": "fertilisers"
+  },
+  {
+    "symbol": "RMT",
+    "companyName": "Ratnamani Metal",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/steeltubespipes/ratnamanimetalstubes/RMT",
+    "sector": "steeltubespipes"
+  },
+  {
+    "symbol": "RB03",
+    "companyName": "RBL Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/banksprivatesector/rblbank/RB03",
+    "sector": "banksprivatesector"
+  },
+  {
+    "symbol": "REC02",
+    "companyName": "REC",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financetermlendinginstitutions/rec/REC02",
+    "sector": "financetermlendinginstitutions"
+  },
+  {
+    "symbol": "RI37",
+    "companyName": "Redington",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computershardware/redington/RI37",
+    "sector": "computershardware"
+  },
+  {
+    "symbol": "RF07",
+    "companyName": "Relaxo Footwear",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/leatherproducts/relaxofootwears/RF07",
+    "sector": "leatherproducts"
+  },
+  {
+    "symbol": "OR01",
+    "companyName": "RHI Magnesita",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cementproductsbuildingmaterials/rhimagnesitaindia/OR01",
+    "sector": "cementproductsbuildingmaterials"
+  },
+  {
+    "symbol": "R02",
+    "companyName": "RITES",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/rites/rites/R02",
+    "sector": "rites"
+  },
+  {
+    "symbol": "SIL27",
+    "companyName": "Sagility",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/sagility/SIL27",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "SAI",
+    "companyName": "SAIL",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/steellarge/steelauthorityindia/SAI",
+    "sector": "steellarge"
+  },
+  {
+    "symbol": "IHF01",
+    "companyName": "Sammaan Capital",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/sammaancapital/sammaancapital/IHF01",
+    "sector": "sammaancapital"
+  },
+  {
+    "symbol": "AP26",
+    "companyName": "Sanofi India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/sanofiindia/AP26",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "SEM",
+    "companyName": "Sarda Energy",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/steelspongeiron/sardaenergyminerals/SEM",
+    "sector": "steelspongeiron"
+  },
+  {
+    "symbol": "SBI",
+    "companyName": "SBI",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bankspublicsector/statebankindia/SBI",
+    "sector": "bankspublicsector"
+  },
+  {
+    "symbol": "SLI03",
+    "companyName": "SBI Life Insura",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/sbilifeinsura/sbilifeinsurancecompany/SLI03",
+    "sector": "sbilifeinsura"
+  },
+  {
+    "symbol": "FAG",
+    "companyName": "Schaeffler Ind",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bearings/schaefflerindia/FAG",
+    "sector": "bearings"
+  },
+  {
+    "symbol": "SEI04",
+    "companyName": "Schneider Infra",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/powergenerationdistribution/schneiderelectricinfrastructure/SEI04",
+    "sector": "powergenerationdistribution"
+  },
+  {
+    "symbol": "SF14",
+    "companyName": "Sheela Foam",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/sheelafoam/SF14",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "SC12",
+    "companyName": "Shree Cements",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cementmajor/shreecements/SC12",
+    "sector": "cementmajor"
+  },
+  {
+    "symbol": "STF",
+    "companyName": "Shriram Finance",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financeleasinghirepurchase/shriramfinance/STF",
+    "sector": "financeleasinghirepurchase"
+  },
+  {
+    "symbol": "SME05",
+    "companyName": "Shyam Metalics",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/ironsteel/shyammetalicsenergy/SME05",
+    "sector": "ironsteel"
+  },
+  {
+    "symbol": "S",
+    "companyName": "Siemens",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/infrastructuregeneral/siemens/S",
+    "sector": "infrastructuregeneral"
+  },
+  {
+    "symbol": "SIL24",
+    "companyName": "SignatureGlobal",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/signatureglobal/signatureglobalindia/SIL24",
+    "sector": "signatureglobal"
+  },
+  {
+    "symbol": "S11",
+    "companyName": "SJVN",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/powergenerationdistribution/sjvn/S11",
+    "sector": "powergenerationdistribution"
+  },
+  {
+    "symbol": "SKF01",
+    "companyName": "SKF India",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bearings/skfindia/SKF01",
+    "sector": "bearings"
+  },
+  {
+    "symbol": "SD6",
+    "companyName": "Sobha",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/constructioncontractingrealestate/sobha/SD6",
+    "sector": "constructioncontractingrealestate"
+  },
+  {
+    "symbol": "SII04",
+    "companyName": "Solar Ind",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/chemicals/solarindustriesindia/SII04",
+    "sector": "chemicals"
+  },
+  {
+    "symbol": "SBP04",
+    "companyName": "Sona BLW",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/autoancillariescastingsforgings/sonablwprecisionforgings/SBP04",
+    "sector": "autoancillariescastingsforgings"
+  },
+  {
+    "symbol": "SS42",
+    "companyName": "Sonata",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftwaremediumsmall/sonatasoftware/SS42",
+    "sector": "computerssoftwaremediumsmall"
+  },
+  {
+    "symbol": "SRF",
+    "companyName": "SRF",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/diversified/srf/SRF",
+    "sector": "diversified"
+  },
+  {
+    "symbol": "SFC02",
+    "companyName": "Star Cement",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cementmajor/starcement/SFC02",
+    "sector": "cementmajor"
+  },
+  {
+    "symbol": "SUMIC54292",
+    "companyName": "SUMITOMO",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/sumitomo/sumitomochemicalindialimite/SUMIC54292",
+    "sector": "sumitomo"
+  },
+  {
+    "symbol": "SPI",
+    "companyName": "Sun Pharma",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/sunpharmaceuticalindustries/SPI",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "STN01",
+    "companyName": "Sun TV Network",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/mediaentertainment/suntvnetwork/STN01",
+    "sector": "mediaentertainment"
+  },
+  {
+    "symbol": "SF23",
+    "companyName": "Sundram",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/fasteners/sundramfasteners/SF23",
+    "sector": "fasteners"
+  },
+  {
+    "symbol": "SI48",
+    "companyName": "Supreme Ind",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/plastics/supremeindustries/SI48",
+    "sector": "plastics"
+  },
+  {
+    "symbol": "SP",
+    "companyName": "Supreme Petro",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/petrochemicals/supremepetrochem/SP",
+    "sector": "petrochemicals"
+  },
+  {
+    "symbol": "SE17",
+    "companyName": "Suzlon Energy",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/powergenerationdistribution/suzlonenergy/SE17",
+    "sector": "powergenerationdistribution"
+  },
+  {
+    "symbol": "SM09",
+    "companyName": "Swan Corp",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/trading/swancorp/SM09",
+    "sector": "trading"
+  },
+  {
+    "symbol": "SI10",
+    "companyName": "Syngene Intl",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/syngeneinternational/SI10",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "TS11",
+    "companyName": "Tanla Platforms",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftwaremediumsmall/tanlaplatforms/TS11",
+    "sector": "computerssoftwaremediumsmall"
+  },
+  {
+    "symbol": "TC",
+    "companyName": "Tata Chemicals",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/chemicals/tatachemicals/TC",
+    "sector": "chemicals"
+  },
+  {
+    "symbol": "TC17",
+    "companyName": "Tata Comm",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/telecommunicationsservice/tatacommunications/TC17",
+    "sector": "telecommunicationsservice"
+  },
+  {
+    "symbol": "TT",
+    "companyName": "TATA Cons. Prod",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/plantationsteacoffee/tataconsumerproducts/TT",
+    "sector": "plantationsteacoffee"
+  },
+  {
+    "symbol": "TE",
+    "companyName": "Tata Elxsi",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/tataelxsi/TE",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "TIC",
+    "companyName": "Tata Inv Corp",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/financeinvestments/tatainvestmentcorporation/TIC",
+    "sector": "financeinvestments"
+  },
+  {
+    "symbol": "TPC",
+    "companyName": "Tata Power",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/tatapower/thetatapowercompany/TPC",
+    "sector": "tatapower"
+  },
+  {
+    "symbol": "TIS",
+    "companyName": "Tata Steel",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/tatasteel/tatasteel/TIS",
+    "sector": "tatasteel"
+  },
+  {
+    "symbol": "TTM01",
+    "companyName": "TataTeleservice",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/telecommunicationsservice/tatateleservicesmaharashtra/TTM01",
+    "sector": "telecommunicationsservice"
+  },
+  {
+    "symbol": "TCS",
+    "companyName": "TCS",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/tataconsultancyservices/TCS",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "TM4",
+    "companyName": "Tech Mahindra",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/techmahindra/TM4",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "TN",
+    "companyName": "Tejas Networks",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/telecommunicationsequipment/tejasnetworks/TN",
+    "sector": "telecommunicationsequipment"
+  },
+  {
+    "symbol": "T",
+    "companyName": "Thermax",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/infrastructuregeneral/thermax/T",
+    "sector": "infrastructuregeneral"
+  },
+  {
+    "symbol": "TI23",
+    "companyName": "Timken",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bearings/timkenindia/TI23",
+    "sector": "bearings"
+  },
+  {
+    "symbol": "TW04",
+    "companyName": "TITAGARH",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/infrastructuregeneral/titagarhrailsystems/TW04",
+    "sector": "infrastructuregeneral"
+  },
+  {
+    "symbol": "TI01",
+    "companyName": "Titan Company",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miscellaneous/titancompany/TI01",
+    "sector": "miscellaneous"
+  },
+  {
+    "symbol": "TM03",
+    "companyName": "TMPV",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/autolcvshcvs/tatamotorspassengervehicles/TM03",
+    "sector": "autolcvshcvs"
+  },
+  {
+    "symbol": "TP06",
+    "companyName": "Torrent Pharma",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/torrentpharmaceuticals/TP06",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "TP14",
+    "companyName": "Torrent Power",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/powergenerationdistribution/torrentpower/TP14",
+    "sector": "powergenerationdistribution"
+  },
+  {
+    "symbol": "T04",
+    "companyName": "Trent",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/retail/trent/T04",
+    "sector": "retail"
+  },
+  {
+    "symbol": "AI01",
+    "companyName": "Trident",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/textilesspinningcottonblended/trident/AI01",
+    "sector": "textilesspinningcottonblended"
+  },
+  {
+    "symbol": "TT14",
+    "companyName": "Triveni Turbine",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/electricequipment/triveniturbine/TT14",
+    "sector": "electricequipment"
+  },
+  {
+    "symbol": "TTK02",
+    "companyName": "TTK Prestige",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/domesticappliances/ttkprestige/TTK02",
+    "sector": "domesticappliances"
+  },
+  {
+    "symbol": "SC",
+    "companyName": "TVS Holdings",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/autoancillaries/tvsholdings/SC",
+    "sector": "autoancillaries"
+  },
+  {
+    "symbol": "TVS",
+    "companyName": "TVS Motor",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/auto23wheelers/tvsmotorcompany/TVS",
+    "sector": "auto23wheelers"
+  },
+  {
+    "symbol": "UCO",
+    "companyName": "UCO Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bankspublicsector/ucobank/UCO",
+    "sector": "bankspublicsector"
+  },
+  {
+    "symbol": "UTC01",
+    "companyName": "UltraTechCement",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/cementmajor/ultratechcement/UTC01",
+    "sector": "cementmajor"
+  },
+  {
+    "symbol": "UBI01",
+    "companyName": "Union Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/bankspublicsector/unionbankindia/UBI01",
+    "sector": "bankspublicsector"
+  },
+  {
+    "symbol": "UB02",
+    "companyName": "United Brewerie",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/breweriesdistilleries/unitedbreweries/UB02",
+    "sector": "breweriesdistilleries"
+  },
+  {
+    "symbol": "US",
+    "companyName": "United Spirits",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/breweriesdistilleries/unitedspirits/US",
+    "sector": "breweriesdistilleries"
+  },
+  {
+    "symbol": "MI4",
+    "companyName": "UNO Minda",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/unominda/unominda/MI4",
+    "sector": "unominda"
+  },
+  {
+    "symbol": "UP04",
+    "companyName": "UPL",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/chemicals/upl/UP04",
+    "sector": "chemicals"
+  },
+  {
+    "symbol": "UM01",
+    "companyName": "Usha Martin",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/steelmediumsmall/ushamartin/UM01",
+    "sector": "steelmediumsmall"
+  },
+  {
+    "symbol": "VI02",
+    "companyName": "V-Guard Ind",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/electricequipment/vguardindustries/VI02",
+    "sector": "electricequipment"
+  },
+  {
+    "symbol": "VT10",
+    "companyName": "Vardhman Text",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/textilesspinningcottonblended/vardhmantextiles/VT10",
+    "sector": "textilesspinningcottonblended"
+  },
+  {
+    "symbol": "VE08",
+    "companyName": "Varroc Engineer",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/engineeringheavy/varrocengineering/VE08",
+    "sector": "engineeringheavy"
+  },
+  {
+    "symbol": "VB05",
+    "companyName": "Varun Beverages",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/foodprocessing/varunbeverages/VB05",
+    "sector": "foodprocessing"
+  },
+  {
+    "symbol": "VF04",
+    "companyName": "Vedant Fashions",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/retailing/vedantfashions/VF04",
+    "sector": "retailing"
+  },
+  {
+    "symbol": "SG",
+    "companyName": "Vedanta",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/miningminerals/vedanta/SG",
+    "sector": "miningminerals"
+  },
+  {
+    "symbol": "VO01",
+    "companyName": "Vinati Organics",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/chemicals/vinatiorganics/VO01",
+    "sector": "chemicals"
+  },
+  {
+    "symbol": "V",
+    "companyName": "Voltas",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/diversified/voltas/V",
+    "sector": "diversified"
+  },
+  {
+    "symbol": "WGS",
+    "companyName": "Welspun Corp",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/steeltubespipes/welspuncorp/WGS",
+    "sector": "steeltubespipes"
+  },
+  {
+    "symbol": "WI03",
+    "companyName": "Welspun Living",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/welspunliving/welspunliving/WI03",
+    "sector": "welspunliving"
+  },
+  {
+    "symbol": "DIC",
+    "companyName": "Westlife Food",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/westlifefood/westlifefoodworld/DIC",
+    "sector": "westlifefood"
+  },
+  {
+    "symbol": "WI",
+    "companyName": "Whirlpool",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/consumergoodswhitegoods/whirlpoolindia/WI",
+    "sector": "consumergoodswhitegoods"
+  },
+  {
+    "symbol": "W",
+    "companyName": "Wipro",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/wipro/W",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "W05",
+    "companyName": "Wockhardt",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/pharmaceuticals/wockhardt/W05",
+    "sector": "pharmaceuticals"
+  },
+  {
+    "symbol": "YB",
+    "companyName": "Yes Bank",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/banksprivatesector/yesbank/YB",
+    "sector": "banksprivatesector"
+  },
+  {
+    "symbol": "ZEE",
+    "companyName": "Zee Entertain",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/mediaentertainment/zeeentertainmententerprises/ZEE",
+    "sector": "mediaentertainment"
+  },
+  {
+    "symbol": "ZT01",
+    "companyName": "Zen Tech",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/zentech/zentechnologies/ZT01",
+    "sector": "zentech"
+  },
+  {
+    "symbol": "ZT02",
+    "companyName": "Zensar Tech",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/computerssoftware/zensartechnologies/ZT02",
+    "sector": "computerssoftware"
+  },
+  {
+    "symbol": "WAB",
+    "companyName": "ZFCVINDIA",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/zfcvindia/zfcommercialvehiclecontrolsystemsindia/WAB",
+    "sector": "zfcvindia"
+  },
+  {
+    "symbol": "CHC",
+    "companyName": "Zydus Life",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/zyduslife/zyduslifesciences/CHC",
+    "sector": "zyduslife"
+  },
+  {
+    "symbol": "ZW01",
+    "companyName": "Zydus Wellness",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/vanaspatioils/zyduswellness/ZW01",
+    "sector": "vanaspatioils"
+  },
+  {
+    "symbol": "IE09",
+    "companyName": "Insolation Ener",
+    "url": "https://www.moneycontrol.com/india/stockpricequote/electronicscomponents/insolationener/IE09",
+    "sector": "electronicscomponents"
+  }
+]
