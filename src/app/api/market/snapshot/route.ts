@@ -62,8 +62,7 @@ Return ONLY a JSON object with this structure:
       systemPrompt: FINANCE_DATA_SYSTEM_PROMPT,
       userPrompt,
       temperature: 0,
-      maxTokens: 1000,
-      enableWebSearch: false, // Disabled for now - web search too slow
+      maxTokens: 1200,
     });
 
     if (!llmRes.ok || !llmRes.data) {

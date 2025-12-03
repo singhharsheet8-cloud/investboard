@@ -14,11 +14,13 @@ interface LLMCallOptions {
   primaryModel?: string;
   fallbackModel?: string;
   useFallbackOnParseError?: boolean;
-  enableWebSearch?: boolean;
 }
 
 const OPENROUTER_URL =
   process.env.OPENROUTER_BASE_URL ?? "https://openrouter.ai/api/v1";
+
+// Default timeout for LLM calls (25 seconds)
+const LLM_TIMEOUT_MS = 25000;
 
 /**
  * Extract JSON from LLM response that might be wrapped in markdown code blocks
@@ -45,131 +47,133 @@ async function callOpenRouterRaw({
   temperature,
   maxTokens,
   model,
-  enableWebSearch = false,
 }: {
   systemPrompt: string;
   userPrompt: string;
   temperature: number;
   maxTokens: number;
   model: string;
-  enableWebSearch?: boolean;
 }) {
-  const requestBody: any = {
-    model,
-    temperature,
-    max_tokens: maxTokens,
-    messages: [
-      { role: "system", content: systemPrompt },
-      { role: "user", content: userPrompt },
-    ],
-  };
+  // Add timeout using AbortController
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), LLM_TIMEOUT_MS);
 
-  // Add web search plugin if enabled
-  if (enableWebSearch) {
-    requestBody.plugins = [
-      {
-        id: "web",
-        max_results: 5,
+  try {
+    console.log(`Calling OpenRouter with model: ${model}`);
+    
+    const res = await fetch(`${OPENROUTER_URL}/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+        "HTTP-Referer":
+          process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
+        "X-Title": "InvestBoard Dashboard",
       },
-    ];
+      body: JSON.stringify({
+        model,
+        temperature,
+        max_tokens: maxTokens,
+        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: userPrompt },
+        ],
+      }),
+      signal: controller.signal,
+    });
+
+    clearTimeout(timeoutId);
+
+    if (!res.ok) {
+      const text = await res.text().catch(() => "");
+      throw new Error(`OpenRouter HTTP ${res.status}: ${res.statusText} ${text}`);
+    }
+
+    const json = await res.json();
+    const content = json?.choices?.[0]?.message?.content ?? "";
+    console.log(`OpenRouter response received, content length: ${content.length}`);
+    return { content, json };
+  } catch (err: any) {
+    clearTimeout(timeoutId);
+    if (err.name === 'AbortError') {
+      throw new Error(`Request timed out after ${LLM_TIMEOUT_MS}ms`);
+    }
+    throw err;
   }
-
-  const res = await fetch(`${OPENROUTER_URL}/chat/completions`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-      "HTTP-Referer":
-        process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
-      "X-Title": "InvestBoard Dashboard",
-    },
-    body: JSON.stringify(requestBody),
-  });
-
-  if (!res.ok) {
-    const text = await res.text().catch(() => "");
-    throw new Error(`OpenRouter HTTP ${res.status}: ${res.statusText} ${text}`);
-  }
-
-  const json = await res.json();
-  const content = json?.choices?.[0]?.message?.content ?? "";
-  return { content, json };
 }
 
 /**
  * Main helper for all LLM calls that must return strict JSON.
- * Uses GPT-5 models with web search plugin for real-time financial data.
- *
- * - Primary model: gpt-5-nano
- * - Fallback model: gpt-5-mini
+ * 
+ * Uses Perplexity Sonar as primary model (has built-in web search).
+ * Falls back to GPT-5-mini if needed.
  */
 export async function callOpenRouterJSON<T = any>({
   systemPrompt,
   userPrompt,
   temperature = 0,
-  maxTokens = 2000,
+  maxTokens = 1500,
   primaryModel,
   fallbackModel,
   useFallbackOnParseError = true,
-  enableWebSearch = true,
 }: LLMCallOptions): Promise<LLMJsonResponse<T>> {
-  const nanoModel = primaryModel ?? process.env.OPENROUTER_MODEL_NANO ?? "openai/gpt-5-nano";
-  const miniModel = fallbackModel ?? process.env.OPENROUTER_MODEL_MINI ?? "openai/gpt-5-mini";
+  // Perplexity Sonar has built-in web search - best for real-time financial data
+  const sonarModel = primaryModel ?? process.env.OPENROUTER_MODEL_PRIMARY ?? "perplexity/sonar";
+  const backupModel = fallbackModel ?? process.env.OPENROUTER_MODEL_FALLBACK ?? "openai/gpt-5-mini";
 
-  // 1) Try primary model first
+  // 1) Try Perplexity Sonar first (has web search built-in)
   try {
     const { content, json } = await callOpenRouterRaw({
       systemPrompt,
       userPrompt,
       temperature,
       maxTokens,
-      model: nanoModel,
-      enableWebSearch,
+      model: sonarModel,
     });
 
     try {
       const jsonStr = extractJSON(content);
       const parsed = JSON.parse(jsonStr);
-      return { ok: true, data: parsed as T, raw: json, modelUsed: nanoModel };
+      return { ok: true, data: parsed as T, raw: json, modelUsed: sonarModel };
     } catch (parseErr: any) {
-      console.error(`JSON parse error from ${nanoModel}:`, parseErr.message, content.substring(0, 200));
+      console.error(`JSON parse error from ${sonarModel}:`, parseErr.message, content.substring(0, 200));
       if (!useFallbackOnParseError) {
         return {
           ok: false,
           error: `Primary JSON parse error: ${parseErr.message}`,
           raw: { content },
-          modelUsed: nanoModel,
+          modelUsed: sonarModel,
         };
       }
-      // Fall through to fallback model
+      // Fall through to backup model
     }
   } catch (err: any) {
-    console.error(`Primary model error (${nanoModel}):`, err.message);
+    console.error(`Primary model error (${sonarModel}):`, err.message);
     if (!useFallbackOnParseError) {
       return {
         ok: false,
         error: `Primary call error: ${err.message}`,
-        modelUsed: nanoModel,
+        modelUsed: sonarModel,
       };
     }
   }
 
-  // 2) Fallback model
+  // 2) Fallback to GPT-5-mini
   try {
+    console.log(`Falling back to ${backupModel}`);
     const { content, json } = await callOpenRouterRaw({
       systemPrompt,
       userPrompt,
       temperature,
       maxTokens,
-      model: miniModel,
-      enableWebSearch,
+      model: backupModel,
     });
 
     const jsonStr = extractJSON(content);
     const parsed = JSON.parse(jsonStr);
-    return { ok: true, data: parsed as T, raw: json, modelUsed: miniModel };
+    return { ok: true, data: parsed as T, raw: json, modelUsed: backupModel };
   } catch (err: any) {
-    console.error(`Fallback model error (${miniModel}):`, err.message);
-    return { ok: false, error: `Fallback error: ${err.message}`, modelUsed: miniModel };
+    console.error(`Fallback model error (${backupModel}):`, err.message);
+    return { ok: false, error: `Fallback error: ${err.message}`, modelUsed: backupModel };
   }
 }
