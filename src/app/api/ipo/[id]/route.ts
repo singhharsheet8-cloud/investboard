@@ -7,21 +7,26 @@ export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const { id: rawId } = await params;
-  const id = decodeURIComponent(rawId);
-  const url = req.nextUrl;
-  const refresh = url.searchParams.get("refresh") === "true";
+  try {
+    const { id: rawId } = await params;
+    const id = decodeURIComponent(rawId);
+    const url = req.nextUrl;
+    const refresh = url.searchParams.get("refresh") === "true";
 
-  // Check cache first (indefinite caching - no TTL)
-  if (!refresh) {
-    const cached = await getIPOCache(id);
-    if (cached) {
-      return NextResponse.json(cached);
+    // Check cache first (indefinite caching - no TTL)
+    if (!refresh) {
+      try {
+        const cached = await getIPOCache(id);
+        if (cached) {
+          return NextResponse.json(cached);
+        }
+      } catch (cacheErr) {
+        console.error("Cache read failed:", cacheErr);
+      }
     }
-  }
 
-  // Fetch new data via LLM
-  const userPrompt = `
+    // Fetch new data via LLM
+    const userPrompt = `
 Fetch detailed data for the IPO with identifier "${id}".
 
 Include:
@@ -41,22 +46,34 @@ Use sources like NSE, BSE, Moneycontrol, Chittorgarh, company DRHP for comprehen
 Return ONLY the JSON object following the ipo schema.
 `;
 
-  const llmRes = await callOpenRouterJSON<any>({
-    systemPrompt: FINANCE_DATA_SYSTEM_PROMPT,
-    userPrompt,
-    temperature: 0,
-    maxTokens: 2000,
-  });
+    const llmRes = await callOpenRouterJSON<any>({
+      systemPrompt: FINANCE_DATA_SYSTEM_PROMPT,
+      userPrompt,
+      temperature: 0,
+      maxTokens: 2000,
+    });
 
-  if (!llmRes.ok || !llmRes.data) {
+    if (!llmRes.ok || !llmRes.data) {
+      return NextResponse.json(
+        { error: llmRes.error ?? "Failed to fetch IPO data" },
+        { status: 500 }
+      );
+    }
+
+    const data = llmRes.data;
+    
+    try {
+      await upsertIPOCache(id, data);
+    } catch (cacheErr) {
+      console.error("Cache write failed:", cacheErr);
+    }
+
+    return NextResponse.json(data);
+  } catch (err: any) {
+    console.error("IPO fetch error:", err);
     return NextResponse.json(
-      { error: llmRes.error ?? "Failed to fetch IPO data" },
+      { error: err.message ?? "Internal server error" },
       { status: 500 }
     );
   }
-
-  const data = llmRes.data;
-  await upsertIPOCache(id, data);
-
-  return NextResponse.json(data);
 }

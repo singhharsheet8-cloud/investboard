@@ -7,21 +7,26 @@ export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ symbol: string }> }
 ) {
-  const { symbol: rawSymbol } = await params;
-  const symbol = decodeURIComponent(rawSymbol);
-  const url = req.nextUrl;
-  const refresh = url.searchParams.get("refresh") === "true";
+  try {
+    const { symbol: rawSymbol } = await params;
+    const symbol = decodeURIComponent(rawSymbol);
+    const url = req.nextUrl;
+    const refresh = url.searchParams.get("refresh") === "true";
 
-  // Check cache first (indefinite caching - no TTL)
-  if (!refresh) {
-    const cached = await getStockCache(symbol);
-    if (cached) {
-      return NextResponse.json(cached);
+    // Check cache first (indefinite caching - no TTL)
+    if (!refresh) {
+      try {
+        const cached = await getStockCache(symbol);
+        if (cached) {
+          return NextResponse.json(cached);
+        }
+      } catch (cacheErr) {
+        console.error("Cache read failed:", cacheErr);
+      }
     }
-  }
 
-  // Fetch new data via LLM
-  const userPrompt = `
+    // Fetch new data via LLM
+    const userPrompt = `
 Fetch detailed data for the Indian stock with symbol or name "${symbol}".
 
 Include:
@@ -37,22 +42,34 @@ Use sources like Moneycontrol, NSE, BSE, Screener for accurate data.
 Return ONLY the JSON object following the stock schema.
 `;
 
-  const llmRes = await callOpenRouterJSON<any>({
-    systemPrompt: FINANCE_DATA_SYSTEM_PROMPT,
-    userPrompt,
-    temperature: 0,
-    maxTokens: 1800,
-  });
+    const llmRes = await callOpenRouterJSON<any>({
+      systemPrompt: FINANCE_DATA_SYSTEM_PROMPT,
+      userPrompt,
+      temperature: 0,
+      maxTokens: 1800,
+    });
 
-  if (!llmRes.ok || !llmRes.data) {
+    if (!llmRes.ok || !llmRes.data) {
+      return NextResponse.json(
+        { error: llmRes.error ?? "Failed to fetch stock data" },
+        { status: 500 }
+      );
+    }
+
+    const data = llmRes.data;
+    
+    try {
+      await upsertStockCache(symbol, data);
+    } catch (cacheErr) {
+      console.error("Cache write failed:", cacheErr);
+    }
+
+    return NextResponse.json(data);
+  } catch (err: any) {
+    console.error("Stock fetch error:", err);
     return NextResponse.json(
-      { error: llmRes.error ?? "Failed to fetch stock data" },
+      { error: err.message ?? "Internal server error" },
       { status: 500 }
     );
   }
-
-  const data = llmRes.data;
-  await upsertStockCache(symbol, data);
-
-  return NextResponse.json(data);
 }

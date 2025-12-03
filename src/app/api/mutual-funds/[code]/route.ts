@@ -7,21 +7,26 @@ export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ code: string }> }
 ) {
-  const { code: rawCode } = await params;
-  const code = decodeURIComponent(rawCode);
-  const url = req.nextUrl;
-  const refresh = url.searchParams.get("refresh") === "true";
+  try {
+    const { code: rawCode } = await params;
+    const code = decodeURIComponent(rawCode);
+    const url = req.nextUrl;
+    const refresh = url.searchParams.get("refresh") === "true";
 
-  // Check cache first (indefinite caching - no TTL)
-  if (!refresh) {
-    const cached = await getMFCache(code);
-    if (cached) {
-      return NextResponse.json(cached);
+    // Check cache first (indefinite caching - no TTL)
+    if (!refresh) {
+      try {
+        const cached = await getMFCache(code);
+        if (cached) {
+          return NextResponse.json(cached);
+        }
+      } catch (cacheErr) {
+        console.error("Cache read failed:", cacheErr);
+      }
     }
-  }
 
-  // Fetch new data via LLM
-  const userPrompt = `
+    // Fetch new data via LLM
+    const userPrompt = `
 Fetch detailed data for the Indian mutual fund with code or name "${code}".
 
 - Prefer Direct Plan - Growth if multiple share classes exist.
@@ -33,22 +38,34 @@ Fetch detailed data for the Indian mutual fund with code or name "${code}".
 Return ONLY the JSON object.
 `;
 
-  const llmRes = await callOpenRouterJSON<any>({
-    systemPrompt: FINANCE_DATA_SYSTEM_PROMPT,
-    userPrompt,
-    temperature: 0,
-    maxTokens: 1800,
-  });
+    const llmRes = await callOpenRouterJSON<any>({
+      systemPrompt: FINANCE_DATA_SYSTEM_PROMPT,
+      userPrompt,
+      temperature: 0,
+      maxTokens: 1800,
+    });
 
-  if (!llmRes.ok || !llmRes.data) {
+    if (!llmRes.ok || !llmRes.data) {
+      return NextResponse.json(
+        { error: llmRes.error ?? "Failed to fetch mutual fund data" },
+        { status: 500 }
+      );
+    }
+
+    const data = llmRes.data;
+    
+    try {
+      await upsertMFCache(code, data);
+    } catch (cacheErr) {
+      console.error("Cache write failed:", cacheErr);
+    }
+
+    return NextResponse.json(data);
+  } catch (err: any) {
+    console.error("Mutual fund fetch error:", err);
     return NextResponse.json(
-      { error: llmRes.error ?? "Failed to fetch mutual fund data" },
+      { error: err.message ?? "Internal server error" },
       { status: 500 }
     );
   }
-
-  const data = llmRes.data;
-  await upsertMFCache(code, data);
-
-  return NextResponse.json(data);
 }
