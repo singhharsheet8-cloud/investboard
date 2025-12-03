@@ -81,7 +81,6 @@ If no IPOs are currently open, return an empty array: []
       userPrompt,
       temperature: 0,
       maxTokens: 2000,
-      enableWebSearch: true,
     });
 
     if (!llmRes.ok || !llmRes.data) {

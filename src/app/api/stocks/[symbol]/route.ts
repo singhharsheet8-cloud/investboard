@@ -75,7 +75,6 @@ Return ONLY a JSON object:
       userPrompt,
       temperature: 0,
       maxTokens: 1800,
-      enableWebSearch: true,
     });
 
     if (!llmRes.ok || !llmRes.data) {
