@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { callOpenRouterJSON } from "@/lib/openrouter-client";
 import { FINANCE_DATA_SYSTEM_PROMPT } from "@/lib/prompts";
 import { prisma } from "@/lib/db/prisma";
+import { getFromMemoryCache, setInMemoryCache, cacheKeys } from "@/lib/cache";
 
 const PAST_IPO_KEY = "past";
 
@@ -9,8 +10,9 @@ export async function GET(req: NextRequest) {
   try {
     const url = req.nextUrl;
     const refresh = url.searchParams.get("refresh") === "true";
+    const cacheKey = cacheKeys.ipoList("past");
 
-    // Check cache first (indefinite caching - no TTL)
+    // Check cache first (DB then memory)
     if (!refresh) {
       try {
         const cached = await prisma.cachedEntity.findUnique({
@@ -26,8 +28,14 @@ export async function GET(req: NextRequest) {
           const data = cached.data as any;
           return NextResponse.json(Array.isArray(data) ? data : [data]);
         }
-      } catch (cacheErr) {
-        console.error("Cache read failed:", cacheErr);
+      } catch (dbErr) {
+        console.error("DB cache read failed, trying memory cache:", dbErr);
+      }
+      
+      // Try memory cache
+      const memoryCached = getFromMemoryCache(cacheKey);
+      if (memoryCached) {
+        return NextResponse.json(memoryCached);
       }
     }
 
@@ -63,7 +71,9 @@ Return a JSON array of IPO objects following the ipo schema.
     }
 
     const data = Array.isArray(llmRes.data) ? llmRes.data : [llmRes.data];
-
+    
+    // Save to both caches
+    setInMemoryCache(cacheKey, data);
     try {
       await prisma.cachedEntity.upsert({
         where: {
@@ -85,8 +95,8 @@ Return a JSON array of IPO objects following the ipo schema.
           fetchedAt: new Date(),
         },
       });
-    } catch (cacheErr) {
-      console.error("Cache write failed:", cacheErr);
+    } catch (dbErr) {
+      console.error("DB cache write failed:", dbErr);
     }
 
     return NextResponse.json(data);

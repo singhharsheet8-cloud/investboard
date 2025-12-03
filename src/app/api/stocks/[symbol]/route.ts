@@ -35,20 +35,34 @@ export async function GET(
       }
     }
 
-    // Fetch new data via LLM with web search
+    // Comprehensive prompt to get ALL data from Moneycontrol and other sources
     const userPrompt = `
-Search the web for CURRENT data about Indian stock "${symbol}".
+CRITICAL: Search Moneycontrol (moneycontrol.com), NSE India (nseindia.com), BSE India (bseindia.com), and Screener.in for COMPREHENSIVE data about Indian stock "${symbol}".
 
-Find from NSE, BSE, Moneycontrol, Screener, Economic Times:
-- Current stock price
-- Today's change and change %
-- Market capitalization
-- P/E ratio, P/B ratio
-- Dividend yield %
-- 52-week high and low
-- Trading volume
-- Sector and industry
-- Company full name
+You MUST search Moneycontrol directly. Look for the stock's detailed quote page with ALL metrics.
+
+REQUIRED DATA TO EXTRACT:
+
+BASIC INFO:
+- Full company name
+- Current stock price (₹)
+- Today's change amount (₹)
+- Today's change percentage (%)
+- Sector
+- Industry
+
+MARKET DATA:
+- Market capitalization (₹ Crores) - CRITICAL
+- 52-week high (₹) - CRITICAL
+- 52-week low (₹) - CRITICAL
+- Current trading volume (number of shares)
+
+VALUATION RATIOS:
+- P/E Ratio (Price-to-Earnings) - CRITICAL
+- P/B Ratio (Price-to-Book) - CRITICAL
+- Dividend Yield (%) - CRITICAL
+- ROE (Return on Equity) %
+- Debt-to-Equity ratio
 
 Return ONLY a JSON object:
 {
@@ -61,6 +75,8 @@ Return ONLY a JSON object:
   "pe": number or null,
   "pb": number or null,
   "dividendYield": number or null,
+  "roe": number or null,
+  "debtToEquity": number or null,
   "high52w": number,
   "low52w": number,
   "volume": number,
@@ -68,13 +84,19 @@ Return ONLY a JSON object:
   "industry": "string",
   "timestamp": "ISO date string"
 }
+
+SEARCH STRATEGY:
+1. Go to Moneycontrol.com and search for stock symbol "${symbol}"
+2. Extract ALL available metrics from the stock's detailed page
+3. Cross-reference with NSE/BSE if needed
+4. Include all metrics found, set to null only if truly unavailable
 `;
 
     const llmRes = await callOpenRouterJSON<any>({
       systemPrompt: FINANCE_DATA_SYSTEM_PROMPT,
       userPrompt,
       temperature: 0,
-      maxTokens: 1800,
+      maxTokens: 2000,
     });
 
     if (!llmRes.ok || !llmRes.data) {

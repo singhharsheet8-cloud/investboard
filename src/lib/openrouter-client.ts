@@ -78,6 +78,10 @@ async function callOpenRouterRaw({
           { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt },
         ],
+        // Enable web search for models that support it
+        ...(model.includes("sonar") ? {} : {
+          plugins: [{ id: "web", max_results: 10 }]
+        }),
       }),
       signal: controller.signal,
     });

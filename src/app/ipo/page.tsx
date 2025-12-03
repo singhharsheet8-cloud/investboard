@@ -22,8 +22,9 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import Link from "next/link";
-import { Plus } from "lucide-react";
+import { Plus, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { useAppStore, useHasHydrated } from "@/lib/store";
 
 export default function IPOPage() {
@@ -100,88 +101,135 @@ export default function IPOPage() {
     }
 
     return (
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Company</TableHead>
-            <TableHead>Sector</TableHead>
-            <TableHead>Price Band</TableHead>
-            <TableHead>Issue Dates</TableHead>
-            <TableHead>GMP</TableHead>
-            <TableHead>Actions</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {(ipos as any[]).map((ipo, index: number) => {
-            const ipoData = ipo.metrics?.ipo || ipo;
-            const id = ipo.identifier?.code || ipo.identifier?.symbol || String(index);
-            return (
-              <TableRow key={id}>
-                <TableCell>
-                  <Link
-                    href={`/ipo/${id}`}
-                    className="font-semibold hover:underline text-primary"
-                  >
-                    {ipoData.companyName || ipo.identifier?.name || "Unknown"}
-                  </Link>
-                </TableCell>
-                <TableCell className="capitalize">{ipoData.sector || "N/A"}</TableCell>
-                <TableCell>
-                  {ipoData.priceBandHigh
-                    ? `₹${ipoData.priceBandLow || "N/A"} - ₹${ipoData.priceBandHigh}`
-                    : "N/A"}
-                </TableCell>
-                <TableCell>
-                  {ipoData.issueOpen && ipoData.issueClose
-                    ? `${new Date(ipoData.issueOpen).toLocaleDateString()} - ${new Date(ipoData.issueClose).toLocaleDateString()}`
-                    : "N/A"}
-                </TableCell>
-                <TableCell>
-                  {ipoData.gmp !== null && ipoData.gmp !== undefined ? (
-                    <span className="text-green-600 font-semibold">₹{ipoData.gmp}</span>
-                  ) : (
-                    "N/A"
-                  )}
-                </TableCell>
-                <TableCell>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => handleAddToWatchlist(id)}
-                    disabled={!userId}
-                  >
-                    <Plus className="h-4 w-4 mr-2" />
-                    Add to Watchlist
-                  </Button>
-                </TableCell>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>
+      <div className="rounded-lg border overflow-hidden">
+        <Table>
+          <TableHeader>
+            <TableRow className="bg-muted/50">
+              <TableHead className="font-semibold">Company</TableHead>
+              <TableHead className="font-semibold">Sector</TableHead>
+              <TableHead className="font-semibold">Price Band</TableHead>
+              <TableHead className="font-semibold">Issue Dates</TableHead>
+              <TableHead className="font-semibold">GMP</TableHead>
+              <TableHead className="font-semibold text-right">Actions</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {(ipos as any[]).map((ipo, index: number) => {
+              const ipoData = ipo.metrics?.ipo || ipo;
+              const id = ipo.identifier?.code || ipo.identifier?.symbol || String(index);
+              return (
+                <TableRow
+                  key={id}
+                  className="hover:bg-muted/30 transition-colors cursor-pointer"
+                >
+                  <TableCell>
+                    <Link
+                      href={`/ipo/${id}`}
+                      className="font-semibold hover:underline text-primary"
+                    >
+                      {ipoData.companyName || ipoData.name || ipo.identifier?.name || "Unknown"}
+                    </Link>
+                  </TableCell>
+                  <TableCell>
+                    <Badge variant="outline" className="capitalize">
+                      {ipoData.sector || "N/A"}
+                    </Badge>
+                  </TableCell>
+                  <TableCell className="font-medium">
+                    {ipoData.priceBandHigh || ipoData.priceHigh
+                      ? `₹${ipoData.priceBandLow || ipoData.priceLow || "N/A"} - ₹${ipoData.priceBandHigh || ipoData.priceHigh}`
+                      : "N/A"}
+                  </TableCell>
+                  <TableCell className="text-sm">
+                    {ipoData.issueOpen && ipoData.issueClose
+                      ? `${new Date(ipoData.issueOpen).toLocaleDateString("en-IN", {
+                          day: "numeric",
+                          month: "short",
+                        })} - ${new Date(ipoData.issueClose).toLocaleDateString("en-IN", {
+                          day: "numeric",
+                          month: "short",
+                        })}`
+                      : "N/A"}
+                  </TableCell>
+                  <TableCell>
+                    {ipoData.gmp !== null && ipoData.gmp !== undefined ? (
+                      <span
+                        className={`font-semibold ${
+                          ipoData.gmp >= 0 ? "text-green-600" : "text-red-600"
+                        }`}
+                      >
+                        ₹{ipoData.gmp}
+                      </span>
+                    ) : (
+                      "N/A"
+                    )}
+                  </TableCell>
+                  <TableCell className="text-right">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleAddToWatchlist(id);
+                      }}
+                      disabled={!userId}
+                      className="hover:bg-primary hover:text-primary-foreground"
+                    >
+                      <Plus className="h-4 w-4 mr-2" />
+                      Add to Watchlist
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </div>
     );
   };
 
   return (
     <AppShell>
-      <div className="space-y-6">
-        <div className="flex items-center justify-between">
-          <h1 className="text-3xl font-bold">IPOs</h1>
+      <div className="space-y-6 pb-8">
+        {/* Header */}
+        <div className="space-y-2">
+          <h1 className="text-3xl md:text-4xl font-bold">IPOs</h1>
+          <p className="text-muted-foreground">
+            Track current, upcoming, and past Initial Public Offerings in India.
+          </p>
         </div>
 
-        <Card>
+        <Card className="shadow-lg">
           <CardHeader>
-            <CardTitle>IPO Overview</CardTitle>
+            <CardTitle className="flex items-center gap-2">
+              <Briefcase className="h-5 w-5 text-primary" />
+              IPO Overview
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <Tabs defaultValue="current" className="w-full">
-              <TabsList>
-                <TabsTrigger value="current">Current</TabsTrigger>
-                <TabsTrigger value="upcoming">Upcoming</TabsTrigger>
-                <TabsTrigger value="past">Past</TabsTrigger>
+              <TabsList className="grid w-full grid-cols-3">
+                <TabsTrigger value="current" className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-green-600"></span>
+                  Current
+                </TabsTrigger>
+                <TabsTrigger value="upcoming" className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+                  Upcoming
+                </TabsTrigger>
+                <TabsTrigger value="past" className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-gray-600"></span>
+                  Past
+                </TabsTrigger>
               </TabsList>
-              <TabsContent value="current" className="space-y-4">
-                <div className="flex justify-end">
+              <TabsContent value="current" className="space-y-4 mt-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold">Currently Open IPOs</h3>
+                    <p className="text-sm text-muted-foreground">
+                      IPOs that are currently accepting subscriptions
+                    </p>
+                  </div>
                   <RefreshButton onRefresh={handleRefreshCurrent} />
                 </div>
                 {renderIPOTable(
@@ -189,8 +237,14 @@ export default function IPOPage() {
                   currentLoading
                 )}
               </TabsContent>
-              <TabsContent value="upcoming" className="space-y-4">
-                <div className="flex justify-end">
+              <TabsContent value="upcoming" className="space-y-4 mt-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold">Upcoming IPOs</h3>
+                    <p className="text-sm text-muted-foreground">
+                      IPOs scheduled to open in the near future
+                    </p>
+                  </div>
                   <RefreshButton onRefresh={handleRefreshUpcoming} />
                 </div>
                 {renderIPOTable(
@@ -198,8 +252,14 @@ export default function IPOPage() {
                   upcomingLoading
                 )}
               </TabsContent>
-              <TabsContent value="past" className="space-y-4">
-                <div className="flex justify-end">
+              <TabsContent value="past" className="space-y-4 mt-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold">Past IPOs</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Recently listed IPOs and their performance
+                    </p>
+                  </div>
                   <RefreshButton onRefresh={handleRefreshPast} />
                 </div>
                 {renderIPOTable(Array.isArray(pastIPOs) ? pastIPOs : [], pastLoading)}

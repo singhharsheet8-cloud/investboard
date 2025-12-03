@@ -11,22 +11,15 @@ interface CacheEntry<T> {
 // Global in-memory cache (persists within serverless function lifetime)
 const memoryCache = new Map<string, CacheEntry<any>>();
 
-// Default TTL: 24 hours (in milliseconds)
-const DEFAULT_TTL_MS = 24 * 60 * 60 * 1000;
-
 /**
  * Get item from memory cache
+ * Cache is indefinite - no TTL. Data persists until manual refresh or serverless function restart.
  */
 export function getFromMemoryCache<T>(key: string): T | null {
   const entry = memoryCache.get(key);
   if (!entry) return null;
   
-  // Check if still valid (within TTL)
-  if (Date.now() - entry.timestamp > DEFAULT_TTL_MS) {
-    memoryCache.delete(key);
-    return null;
-  }
-  
+  // No TTL check - cache is indefinite
   return entry.data as T;
 }
 
@@ -71,5 +64,6 @@ export const cacheKeys = {
   mutualFund: (code: string) => `mf:${code}`,
   ipo: (id: string) => `ipo:${id}`,
   ipoList: (type: "current" | "upcoming" | "past") => `ipo:list:${type}`,
+  watchlist: (userId: string) => `watchlist:${userId}`,
 };
 

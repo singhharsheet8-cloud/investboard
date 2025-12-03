@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { AppShell } from "@/components/layout/AppShell";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Search, Plus } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Search, Plus, Filter, X } from "lucide-react";
 import { useMutualFundSearch } from "@/lib/swr-fetchers";
 import { EmptyState } from "@/components/common/EmptyState";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -19,10 +20,37 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import mutualFundsData from "@/data/mutual-funds.json";
+
+// Popular categories for quick filter
+const POPULAR_CATEGORIES = [
+  "large-cap",
+  "mid-cap",
+  "small-cap",
+  "flexi-cap",
+  "multi-cap",
+  "elss",
+  "dividend-yield",
+  "value",
+  "sectoral-thematic",
+];
+
+// Example funds to show when no search
+const EXAMPLE_FUNDS = [
+  { code: "MHD3467", name: "HDFC Dividend Yield Fund - Direct Plan - Growth", category: "dividend-yield" },
+  { code: "MCA212", name: "Canara Robeco Large Cap Fund Direct Plan", category: "large-cap" },
+  { code: "MBS809", name: "Aditya Birla Sun Life Dividend Yield Fund - Direct Plan - Growth", category: "dividend-yield" },
+  { code: "MIB250", name: "LIC MF Dividend Yield Fund - Direct Plan - Growth", category: "dividend-yield" },
+  { code: "MTA1369", name: "Tata Dividend Yield Fund - Direct Plan - Growth", category: "dividend-yield" },
+  { code: "MTE297", name: "Franklin India Dividend Yield Fund - Direct - Growth", category: "dividend-yield" },
+  { code: "MID300", name: "Sundaram Dividend Yield Fund - Direct Plan - Growth", category: "dividend-yield" },
+  { code: "MBOA063", name: "Baroda BNP Paribas Dividend Yield Fund - Direct Plan - Growth", category: "dividend-yield" },
+];
 
 export default function MutualFundsPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const { data: searchResults, isLoading } = useMutualFundSearch(debouncedQuery);
   const hasHydrated = useHasHydrated();
   const getOrCreateUserId = useAppStore((state) => state.getOrCreateUserId);
@@ -41,6 +69,14 @@ export default function MutualFundsPage() {
     }, 300);
     return () => clearTimeout(timer);
   }, [searchQuery]);
+
+  // Filter funds by category from local data
+  const filteredFunds = useMemo(() => {
+    if (!selectedCategory) return [];
+    return (mutualFundsData as any[]).filter(
+      (fund) => fund.category === selectedCategory
+    ).slice(0, 50); // Limit to 50 for performance
+  }, [selectedCategory]);
 
   const handleAddToWatchlist = async (code: string) => {
     if (!userId) return;
@@ -61,72 +97,150 @@ export default function MutualFundsPage() {
     }
   };
 
+  const displayFunds = searchQuery
+    ? searchResults || []
+    : selectedCategory
+    ? filteredFunds
+    : EXAMPLE_FUNDS;
+
   return (
     <AppShell>
-      <div className="space-y-6">
-        <div className="flex items-center justify-between">
-          <h1 className="text-3xl font-bold">Mutual Funds</h1>
+      <div className="space-y-6 pb-8">
+        {/* Header */}
+        <div className="space-y-2">
+          <h1 className="text-3xl md:text-4xl font-bold">Mutual Funds</h1>
+          <p className="text-muted-foreground">
+            Search and explore Indian mutual funds. Add your favorites to watchlist.
+          </p>
         </div>
 
-        <Card>
+        {/* Search Card - Enhanced */}
+        <Card className="shadow-lg border-primary/20">
           <CardHeader>
-            <CardTitle>Search Mutual Funds</CardTitle>
+            <CardTitle className="flex items-center gap-2">
+              <Search className="h-5 w-5 text-primary" />
+              Search Mutual Funds
+            </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="space-y-4">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <Input
-                placeholder="Search by fund name or code..."
+                placeholder="Search by fund name or code (e.g., HDFC, SBI, ICICI)..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10"
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setSelectedCategory(null); // Clear category filter when searching
+                }}
+                className="pl-10 h-12 text-base"
               />
+            </div>
+
+            {/* Category Filters */}
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <Filter className="h-4 w-4 text-muted-foreground" />
+                <span className="text-sm font-medium text-muted-foreground">
+                  Filter by Category:
+                </span>
+                {selectedCategory && (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setSelectedCategory(null)}
+                    className="h-6 px-2"
+                  >
+                    <X className="h-3 w-3 mr-1" />
+                    Clear
+                  </Button>
+                )}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {POPULAR_CATEGORIES.map((category) => (
+                  <Button
+                    key={category}
+                    variant={selectedCategory === category ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => {
+                      setSelectedCategory(category);
+                      setSearchQuery(""); // Clear search when filtering
+                    }}
+                    className="text-xs"
+                  >
+                    {category.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}
+                  </Button>
+                ))}
+              </div>
             </div>
           </CardContent>
         </Card>
 
-        {searchQuery && (
-          <Card>
-            <CardHeader>
-              <CardTitle>Search Results</CardTitle>
-            </CardHeader>
-            <CardContent>
-              {isLoading && (
-                <div className="space-y-2">
-                  <Skeleton className="h-12" />
-                  <Skeleton className="h-12" />
-                  <Skeleton className="h-12" />
-                </div>
-              )}
-              {searchResults && searchResults.length > 0 ? (
+        {/* Results Card */}
+        <Card className="shadow-lg">
+          <CardHeader>
+            <div className="flex items-center justify-between">
+              <CardTitle>
+                {searchQuery
+                  ? "Search Results"
+                  : selectedCategory
+                  ? `${selectedCategory.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())} Funds`
+                  : "Popular Funds"}
+                {displayFunds && displayFunds.length > 0 && (
+                  <Badge variant="secondary" className="ml-2">
+                    {displayFunds.length} {displayFunds.length === 1 ? "fund" : "funds"}
+                  </Badge>
+                )}
+              </CardTitle>
+            </div>
+          </CardHeader>
+          <CardContent>
+            {isLoading && searchQuery ? (
+              <div className="space-y-3">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Skeleton key={i} className="h-16 w-full" />
+                ))}
+              </div>
+            ) : displayFunds && displayFunds.length > 0 ? (
+              <div className="rounded-lg border overflow-hidden">
                 <Table>
                   <TableHeader>
-                    <TableRow>
-                      <TableHead>Code</TableHead>
-                      <TableHead>Fund Name</TableHead>
-                      <TableHead>Category</TableHead>
-                      <TableHead>Actions</TableHead>
+                    <TableRow className="bg-muted/50">
+                      <TableHead className="font-semibold">Code</TableHead>
+                      <TableHead className="font-semibold">Fund Name</TableHead>
+                      <TableHead className="font-semibold">Category</TableHead>
+                      <TableHead className="font-semibold text-right">Actions</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {searchResults.map((fund: any) => (
-                      <TableRow key={fund.code}>
+                    {displayFunds.map((fund: any) => (
+                      <TableRow
+                        key={fund.code}
+                        className="hover:bg-muted/30 transition-colors cursor-pointer"
+                      >
                         <TableCell>
                           <Link
                             href={`/mutual-funds/${fund.code}`}
-                            className="font-semibold hover:underline text-primary"
+                            className="font-semibold hover:underline text-primary font-mono"
                           >
                             {fund.code}
                           </Link>
                         </TableCell>
-                        <TableCell>{fund.name}</TableCell>
-                        <TableCell className="capitalize">{fund.category}</TableCell>
+                        <TableCell className="font-medium">{fund.name}</TableCell>
                         <TableCell>
+                          <Badge variant="outline" className="capitalize">
+                            {fund.category?.replace(/-/g, " ") || "N/A"}
+                          </Badge>
+                        </TableCell>
+                        <TableCell className="text-right">
                           <Button
                             variant="outline"
                             size="sm"
-                            onClick={() => handleAddToWatchlist(fund.code)}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleAddToWatchlist(fund.code);
+                            }}
                             disabled={!userId}
+                            className="hover:bg-primary hover:text-primary-foreground"
                           >
                             <Plus className="h-4 w-4 mr-2" />
                             Add to Watchlist
@@ -136,15 +250,15 @@ export default function MutualFundsPage() {
                     ))}
                   </TableBody>
                 </Table>
-              ) : searchResults && searchResults.length === 0 ? (
-                <EmptyState
-                  title="No mutual funds found"
-                  description={`No mutual funds found matching "${debouncedQuery}"`}
-                />
-              ) : null}
-            </CardContent>
-          </Card>
-        )}
+              </div>
+            ) : searchQuery && searchResults && searchResults.length === 0 ? (
+              <EmptyState
+                title="No mutual funds found"
+                description={`No mutual funds found matching "${debouncedQuery}". Try a different search term or browse by category.`}
+              />
+            ) : null}
+          </CardContent>
+        </Card>
       </div>
     </AppShell>
   );
