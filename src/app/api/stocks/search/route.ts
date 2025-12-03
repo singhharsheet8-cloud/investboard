@@ -3,34 +3,43 @@ import stocksData from "@/data/stocks.json";
 
 interface StockItem {
   symbol: string;
-  companyName: string;
-  url: string;
+  name: string;
   sector: string;
 }
 
 export async function GET(req: NextRequest) {
   const url = req.nextUrl;
   const query = url.searchParams.get("q")?.toLowerCase() || "";
+  const sector = url.searchParams.get("sector")?.toLowerCase() || "";
 
-  if (!query) {
+  if (!query && !sector) {
     return NextResponse.json([]);
   }
 
   const stocks = stocksData as StockItem[];
 
-  const results = stocks
-    .filter(
+  let results = stocks;
+
+  // Filter by sector if provided
+  if (sector) {
+    results = results.filter((stock) => stock.sector === sector);
+  }
+
+  // Filter by search query
+  if (query) {
+    results = results.filter(
       (stock) =>
-        stock.companyName.toLowerCase().includes(query) ||
+        stock.name.toLowerCase().includes(query) ||
         stock.symbol.toLowerCase().includes(query)
-    )
-    .slice(0, 20) // Limit to 20 results
-    .map((stock) => ({
+    );
+  }
+
+  // Return top 20 results
+  return NextResponse.json(
+    results.slice(0, 20).map((stock) => ({
       symbol: stock.symbol,
-      name: stock.companyName,
+      name: stock.name,
       sector: stock.sector,
-    }));
-
-  return NextResponse.json(results);
+    }))
+  );
 }
-
