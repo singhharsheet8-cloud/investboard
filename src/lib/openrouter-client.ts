@@ -45,13 +45,35 @@ async function callOpenRouterRaw({
   temperature,
   maxTokens,
   model,
+  enableWebSearch = false,
 }: {
   systemPrompt: string;
   userPrompt: string;
   temperature: number;
   maxTokens: number;
   model: string;
+  enableWebSearch?: boolean;
 }) {
+  const requestBody: any = {
+    model,
+    temperature,
+    max_tokens: maxTokens,
+    messages: [
+      { role: "system", content: systemPrompt },
+      { role: "user", content: userPrompt },
+    ],
+  };
+
+  // Add web search plugin if enabled
+  if (enableWebSearch) {
+    requestBody.plugins = [
+      {
+        id: "web",
+        max_results: 5,
+      },
+    ];
+  }
+
   const res = await fetch(`${OPENROUTER_URL}/chat/completions`, {
     method: "POST",
     headers: {
@@ -61,15 +83,7 @@ async function callOpenRouterRaw({
         process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
       "X-Title": "InvestBoard Dashboard",
     },
-    body: JSON.stringify({
-      model,
-      temperature,
-      max_tokens: maxTokens,
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: userPrompt },
-      ],
-    }),
+    body: JSON.stringify(requestBody),
   });
 
   if (!res.ok) {
@@ -84,10 +98,10 @@ async function callOpenRouterRaw({
 
 /**
  * Main helper for all LLM calls that must return strict JSON.
- * Uses :online suffix for web search enabled models.
+ * Uses GPT-5 models with web search plugin for real-time financial data.
  *
- * - Primary model: gpt-5-nano:online (web search enabled)
- * - Fallback model: gpt-5-mini:online
+ * - Primary model: gpt-5-nano
+ * - Fallback model: gpt-5-mini
  */
 export async function callOpenRouterJSON<T = any>({
   systemPrompt,
@@ -99,17 +113,8 @@ export async function callOpenRouterJSON<T = any>({
   useFallbackOnParseError = true,
   enableWebSearch = true,
 }: LLMCallOptions): Promise<LLMJsonResponse<T>> {
-  // Get base model names from env or defaults
-  const baseNano = primaryModel ?? process.env.OPENROUTER_MODEL_NANO ?? "openai/gpt-5-nano";
-  const baseMini = fallbackModel ?? process.env.OPENROUTER_MODEL_MINI ?? "openai/gpt-5-mini";
-  
-  // Add :online suffix for web search if enabled and not already present
-  const nanoModel = enableWebSearch && !baseNano.includes(":online") 
-    ? `${baseNano}:online` 
-    : baseNano;
-  const miniModel = enableWebSearch && !baseMini.includes(":online") 
-    ? `${baseMini}:online` 
-    : baseMini;
+  const nanoModel = primaryModel ?? process.env.OPENROUTER_MODEL_NANO ?? "openai/gpt-5-nano";
+  const miniModel = fallbackModel ?? process.env.OPENROUTER_MODEL_MINI ?? "openai/gpt-5-mini";
 
   // 1) Try primary model first
   try {
@@ -119,6 +124,7 @@ export async function callOpenRouterJSON<T = any>({
       temperature,
       maxTokens,
       model: nanoModel,
+      enableWebSearch,
     });
 
     try {
@@ -156,6 +162,7 @@ export async function callOpenRouterJSON<T = any>({
       temperature,
       maxTokens,
       model: miniModel,
+      enableWebSearch,
     });
 
     const jsonStr = extractJSON(content);
