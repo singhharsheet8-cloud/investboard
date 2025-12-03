@@ -7,6 +7,9 @@ import {
 } from "@/lib/db/repositories/snapshotRepo";
 import { getFromMemoryCache, setInMemoryCache, cacheKeys } from "@/lib/cache";
 
+// Increase function timeout for LLM calls with web search
+export const maxDuration = 60;
+
 export async function GET(req: NextRequest) {
   try {
     const url = req.nextUrl;

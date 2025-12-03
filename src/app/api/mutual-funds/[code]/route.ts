@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+
+// Increase function timeout for LLM calls with web search
+export const maxDuration = 60;
 import { callOpenRouterJSON } from "@/lib/openrouter-client";
 import { FINANCE_DATA_SYSTEM_PROMPT } from "@/lib/prompts";
 import { getMFCache, upsertMFCache } from "@/lib/db/repositories/mutualFundsRepo";
